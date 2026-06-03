@@ -1,0 +1,40 @@
+import { pillars } from "@/data/features";
+import PillarCard from "./PillarCard";
+
+const Pillars = () => {
+  return (
+    <section className="py-32 md:px-16 bg-surface-container-lowest">
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center space-y-4">
+          <h2 className="font-display  text-primary text-2xl md:text-[32px] lg:text-[40px] font-semibold">
+            Pillars of Our Care
+          </h2>
+
+          <p className="font-body text-lg text-on-surface-variant max-w-2xl mx-auto">
+            Everything we do is guided by these four fundamental principles,
+            ensuring a life of quality and purpose.
+          </p>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Render pillar cards here using the pillars data */}
+          {pillars.map((pillar) => {
+            return (
+              <PillarCard
+                key={pillar.id}
+                title={pillar.title}
+                description={pillar.description}
+                icon={pillar.icon}
+                iconBg={pillar.iconBg}
+                iconColor={pillar.iconColor}
+                offset={pillar.offset}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Pillars;

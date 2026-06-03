@@ -9,8 +9,8 @@ const HomePage = () => {
       <div className="min-h-screen relative w-full flex items-center">
         <div className="h-screen absolute w-full">
           <Image
-            src={"/images/adult-moms.jpg"}
-            alt="Home"
+            src={"/images/homeBg.jpg"}
+            alt="Home Background"
             fill
             className="object-cover"
           />

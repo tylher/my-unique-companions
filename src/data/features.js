@@ -1,4 +1,26 @@
-import { MdAssignmentTurnedIn, MdCottage, MdGroup } from "react-icons/md";
+import {
+  MdAccessibility,
+  MdAccessible,
+  MdAssignmentTurnedIn,
+  MdChat,
+  MdCleaningServices,
+  MdCottage,
+  MdFavorite,
+  MdGroup,
+  MdHandshake,
+  MdHealthAndSafety,
+  MdHome,
+  MdLocalHospital,
+  MdMedication,
+  MdOutlineFavorite,
+  MdOutlineSelfImprovement,
+  MdPsychology,
+  MdRestaurant,
+  MdVisibility,
+} from "react-icons/md";
+
+import { IoHeart } from "react-icons/io5";
+import { LuUsers } from "react-icons/lu";
 
 export const features = [
   {
@@ -60,5 +82,143 @@ export const familyExpectations = [
     description:
       "Tailored support that evolves with your family's needs, ensuring optimal health and well-being.",
     icon: MdAssignmentTurnedIn,
+  },
+];
+
+export const pillars = [
+  {
+    id: 1,
+    title: "Dignity",
+    description:
+      "We honor the life experiences and individuality of every resident, treating them with the utmost respect in every interaction.",
+    icon: IoHeart,
+    iconBg: "bg-blue-100",
+    iconColor: "text-blue-600",
+    offset: false,
+  },
+  {
+    id: 2,
+    title: "Independence",
+    description:
+      "We encourage and support autonomy, empowering our residents to make choices and engage in activities they love.",
+    icon: MdAccessibility,
+    iconBg: "bg-green-100",
+    iconColor: "text-green-600",
+    offset: true,
+  },
+  {
+    id: 3,
+    title: "Respect",
+    description:
+      "A culture of mutual respect permeates our home, fostering a secure and harmonious environment for staff and residents alike.",
+    icon: MdHandshake,
+    iconBg: "bg-blue-100",
+    iconColor: "text-blue-600",
+    offset: false,
+  },
+  {
+    id: 4,
+    title: "Connection",
+    description:
+      "We build strong, meaningful relationships, ensuring no one ever feels isolated. We are a family, first and foremost.",
+    icon: LuUsers,
+    iconBg: "bg-green-100",
+    iconColor: "text-green-600",
+    offset: true,
+  },
+];
+
+export const services = [
+  {
+    title: "Activities of Daily Living",
+    description:
+      "Assistance with personal daily routines while preserving dignity and independence.",
+    icon: MdOutlineSelfImprovement,
+  },
+  {
+    title: "Medication Assistance",
+    description:
+      "Support with medication administration as permitted by law and care plans.",
+    icon: MdMedication,
+  },
+  {
+    title: "Memory Care",
+    description:
+      "Specialized support for dementia and Alzheimer’s in a safe, structured environment.",
+    icon: MdPsychology,
+  },
+  {
+    title: "Developmental Support",
+    description:
+      "Care tailored for individuals with developmental disabilities to encourage growth and comfort.",
+    icon: MdAccessible,
+  },
+  {
+    title: "Nutrition & Meals",
+    description:
+      "Balanced meal preparation designed to meet health and dietary needs.",
+    icon: MdRestaurant,
+  },
+  {
+    title: "Social Engagement",
+    description:
+      "Recreational and emotional support that promotes joy and connection.",
+    icon: MdFavorite,
+  },
+  {
+    title: "Healthcare Coordination",
+    description:
+      "Seamless communication with healthcare providers and families.",
+    icon: MdLocalHospital,
+  },
+  {
+    title: "Supervision & Safety",
+    description:
+      "Continuous monitoring to ensure resident safety and peace of mind.",
+    icon: MdVisibility,
+  },
+  {
+    title: "Housekeeping Support",
+    description:
+      "Clean, organized living spaces through laundry and housekeeping services.",
+    icon: MdCleaningServices,
+  },
+];
+
+export const philosophy = [
+  {
+    title: "Dignity and Independence",
+    text: "We honor every resident’s individuality by encouraging autonomy while providing respectful support in daily living.",
+    icon: MdOutlineSelfImprovement,
+    image:
+      "https://images.unsplash.com/photo-1520975922284-9b0e6fefc6a1?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Personalized Care",
+    text: "Care plans are tailored to each person’s unique needs, preferences, and health requirements.",
+    icon: MdOutlineFavorite,
+    image:
+      "https://images.unsplash.com/photo-1576765607924-3f7b8410a787?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Warm Home Environment",
+    text: "We create a comforting, home-like space that promotes belonging, safety, and peace of mind.",
+    icon: MdHome,
+    image:
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Open Communication",
+    text: "We maintain transparent and ongoing communication with families and care partners.",
+    icon: MdChat,
+    image:
+      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Holistic Well-being",
+    text: "We support physical, emotional, and social wellness through thoughtful, continuous care.",
+    icon: MdHealthAndSafety,
+    image:
+      "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1200&q=80",
   },
 ];
