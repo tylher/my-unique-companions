@@ -5,7 +5,7 @@ export default function CarePhilosophySection() {
   return (
     <section>
       {/* Header */}
-      <div className="bg-white py-20 text-center">
+      <div className="bg-white py-10 text-center">
         <h1 className="text-5xl md:text-6xl font-display text-primary-container mb-4 font-semibold">
           Care Philosophy
         </h1>

@@ -25,7 +25,7 @@ export default function PhilosophyBlock({ item, index }) {
       ref={ref}
       className={`
         w-full
-        py-[120px]
+        py-16
         transition-all
         duration-700
         ${index % 2 === 1 ? "bg-surface-container-low" : "bg-white"}

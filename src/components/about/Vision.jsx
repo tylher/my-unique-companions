@@ -44,7 +44,7 @@ const floatVariants = (index) => ({
 
 const Vision = () => {
   return (
-    <section className="py-32 bg-white z-10 -mt-10">
+    <section className="py-16 bg-white z-10 -mt-10">
       <div className="max-w-3xl mx-auto text-center mb-20">
         <h2 className="font-display font-semibold text-5xl text-primary mb-6">
           Our Vision

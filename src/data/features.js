@@ -208,8 +208,7 @@ export const philosophy = [
     title: "Dignity and Independence",
     text: "We honor every resident’s individuality by encouraging autonomy while providing respectful support in daily living.",
     icon: MdOutlineSelfImprovement,
-    image:
-      "https://images.unsplash.com/photo-1520975922284-9b0e6fefc6a1?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/independence.jpg",
   },
   {
     title: "Personalized Care",
@@ -229,15 +228,13 @@ export const philosophy = [
     title: "Open Communication",
     text: "We maintain transparent and ongoing communication with families and care partners.",
     icon: MdChat,
-    image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/communication.jpg",
   },
   {
     title: "Holistic Well-being",
     text: "We support physical, emotional, and social wellness through thoughtful, continuous care.",
     icon: MdHealthAndSafety,
-    image:
-      "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/wellbeing.jpg",
   },
 ];
 

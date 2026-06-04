@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function HomeFeeling() {
   return (
-    <section className="relative overflow-hidden bg-surface-container-low py-32">
+    <section className="relative overflow-hidden bg-surface-container-low py-16">
       {/* Ambient blobs */}
       <div className="absolute left-0 top-40 h-80 w-80 rounded-full bg-primary-container opacity-[0.04] blur-[120px]" />
 
@@ -18,7 +18,7 @@ export default function HomeFeeling() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-display font-semibold text-5xl md:text-6xl text-primary mb-28 mx-auto text-center leading-tight">
+          <h2 className="font-display font-semibold text-5xl md:text-6xl text-primary mb-12 mx-auto text-center leading-tight">
             A Home That Feels Like Family
           </h2>
         </motion.div>
@@ -27,7 +27,7 @@ export default function HomeFeeling() {
           {/* Center journey line */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-[#d8dceb]" />
 
-          <div className="flex flex-col gap-20">
+          <div className="flex flex-col gap-10">
             {statements.map((item, index) => {
               const isRight = index % 2 === 1;
 
