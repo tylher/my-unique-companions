@@ -1,7 +1,11 @@
 "use client";
 import AboutServices from "@/components/about/AboutServices";
 import CarePhilosophySection from "@/components/about/CarePhilosophySection";
+import CommitmentBanner from "@/components/about/CommitmentBanner";
+import HomeFeeling from "@/components/about/HomeFeeling";
+import Mission from "@/components/about/Mission";
 import Pillars from "@/components/about/Pillars";
+import Vision from "@/components/about/Vision";
 import Image from "next/image";
 
 const AboutPage = () => {
@@ -79,12 +83,25 @@ const AboutPage = () => {
       </section>
 
       <section>
-        <Pillars />
+        {/* <AboutServices /> */}
+        <AboutServices />
       </section>
 
       <section>
-        {/* <AboutServices /> */}
-        <AboutServices />
+        <HomeFeeling />
+      </section>
+
+      <section>
+        <Mission />
+      </section>
+
+      <section>
+        <Vision />
+      </section>
+
+      <section>
+        {/* <CommitmentBanner /> */}
+        <CommitmentBanner />
       </section>
     </div>
   );

@@ -6,6 +6,7 @@ import {
   MdCleaningServices,
   MdCottage,
   MdFavorite,
+  MdFavoriteBorder,
   MdGroup,
   MdHandshake,
   MdHealthAndSafety,
@@ -13,9 +14,12 @@ import {
   MdLocalHospital,
   MdMedication,
   MdOutlineFavorite,
+  MdOutlineHome,
   MdOutlineSelfImprovement,
+  MdPeopleOutline,
   MdPsychology,
   MdRestaurant,
+  MdVerified,
   MdVisibility,
 } from "react-icons/md";
 
@@ -220,5 +224,60 @@ export const philosophy = [
     icon: MdHealthAndSafety,
     image:
       "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1200&q=80",
+  },
+];
+
+export const statements = [
+  {
+    title: "A warm, welcoming environment from the moment you arrive.",
+    description:
+      "Every corner of our home is designed with comfort in mind — familiar, calm, and filled with natural light. This is not a facility. It is a home.",
+  },
+  {
+    title: "Your routines, preferences, and rituals — respected always.",
+    description:
+      "Morning coffee a certain way. An afternoon programme you love. We build our days around yours, not the other way around.",
+  },
+  {
+    title: "Compassion is present in every interaction.",
+    description:
+      "Our caregivers lead with patience, kindness, and genuine respect for every resident.",
+  },
+  {
+    title: "Families remain an important part of the journey.",
+    description:
+      "We foster open communication and meaningful partnerships with loved ones.",
+  },
+  {
+    title: "Belonging is at the heart of everything we do.",
+    description:
+      "We create opportunities for friendship, engagement, and a true sense of community.",
+  },
+];
+
+export const visionPillars = [
+  {
+    title: "High-Quality Support",
+    description:
+      "Delivering consistent, compassionate, and dependable care that residents and families can trust.",
+    icon: MdVerified,
+  },
+  {
+    title: "Meaningful Relationships",
+    description:
+      "Building genuine connections with residents, families, and care partners through openness and trust.",
+    icon: MdPeopleOutline,
+  },
+  {
+    title: "A Home-Like Environment",
+    description:
+      "Creating a peaceful, welcoming space where comfort, familiarity, and belonging are part of everyday life.",
+    icon: MdOutlineHome,
+  },
+  {
+    title: "Dignity & Confidence",
+    description:
+      "Empowering residents to live with independence, purpose, and confidence regardless of age or ability.",
+    icon: MdFavoriteBorder,
   },
 ];
