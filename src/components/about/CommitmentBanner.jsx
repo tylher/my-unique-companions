@@ -8,7 +8,7 @@ const CommitmentBanner = () => {
           We care for each person as we would our own family.
         </h2>
 
-        <div className="flex flex-wrap justify-center items-center gap-4 text-[#a0acf8] mb-12">
+        <div className="flex flex-wrap justify-center items-center gap-4 text-[#dbdef2] mb-12">
           <span>Compassion</span>
           <span className="w-2 h-2 rounded-full bg-[#e35e25]" />
 

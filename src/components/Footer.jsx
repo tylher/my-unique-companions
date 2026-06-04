@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-gray-400 flex justify-center items-center py-4">
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-200">
           &copy; {new Date().getFullYear()} Unique Companions AFQ. All rights
           reserved.
         </p>

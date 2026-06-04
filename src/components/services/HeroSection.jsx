@@ -66,7 +66,7 @@ const HeroSection = () => {
       <svg
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="block w-full h-[120px]"
+        className="block w-full h-30"
       >
         <path
           fill="#ffffff"
