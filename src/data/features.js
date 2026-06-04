@@ -23,6 +23,20 @@ import {
   MdVisibility,
 } from "react-icons/md";
 
+import {
+  FaBrain,
+  FaBroom,
+  FaClipboardList,
+  FaHandHoldingHeart,
+  FaHeartbeat,
+  FaHome,
+  FaPills,
+  FaShieldAlt,
+  FaUsers,
+  FaUtensils,
+  FaWalking,
+} from "react-icons/fa";
+
 import { IoHeart } from "react-icons/io5";
 import { LuUsers } from "react-icons/lu";
 
@@ -239,19 +253,19 @@ export const statements = [
       "Morning coffee a certain way. An afternoon programme you love. We build our days around yours, not the other way around.",
   },
   {
-    title: "Compassion is present in every interaction.",
+    title: "Meaningful activities that bring purpose and joy.",
     description:
-      "Our caregivers lead with patience, kindness, and genuine respect for every resident.",
+      "From social gatherings to quiet creative moments, we offer opportunities for residents to feel engaged, stimulated, and genuinely alive.",
   },
   {
-    title: "Families remain an important part of the journey.",
+    title: "Genuine connection — with caregivers and fellow residents.",
     description:
-      "We foster open communication and meaningful partnerships with loved ones.",
+      "Relationships are at the heart of who we are. We foster a community where everyone looks out for one another — staff and residents alike.",
   },
   {
-    title: "Belonging is at the heart of everything we do.",
+    title: "A true sense of community and belonging.",
     description:
-      "We create opportunities for friendship, engagement, and a true sense of community.",
+      "No one should feel alone. At Unique Companions, every resident is known by name, by story, and by the things that make them uniquely themselves.",
   },
 ];
 
@@ -279,5 +293,240 @@ export const visionPillars = [
     description:
       "Empowering residents to live with independence, purpose, and confidence regardless of age or ability.",
     icon: MdFavoriteBorder,
+  },
+];
+
+export const servicesPageSections = [
+  {
+    type: "service",
+    serviceId: "daily-living",
+  },
+  {
+    type: "service",
+    serviceId: "medication",
+  },
+  {
+    type: "service",
+    serviceId: "meals",
+  },
+  {
+    type: "service",
+    serviceId: "housekeeping",
+  },
+
+  {
+    type: "special",
+    component: "memory-care",
+  },
+
+  {
+    type: "service",
+    serviceId: "healthcare",
+  },
+  {
+    type: "service",
+    serviceId: "activities",
+  },
+  {
+    type: "service",
+    serviceId: "safety",
+  },
+
+  {
+    type: "special",
+    component: "timeline",
+  },
+
+  {
+    type: "special",
+    component: "stats",
+  },
+
+  {
+    type: "special",
+    component: "cta",
+  },
+];
+
+export const detailedServices = [
+  {
+    id: "daily-living",
+    type: "A",
+    icon: FaWalking,
+    title: "Assistance with Activities of Daily Living",
+    description:
+      "We assist residents with everyday tasks while encouraging independence whenever possible. Our caregivers provide gentle, respectful support with dignity at the center of care.",
+    bullets: [
+      "Bathing, dressing, and grooming",
+      "Mobility and transfers",
+      "Toileting and incontinence care",
+      "Meal assistance and hydration support",
+      "Morning and bedtime routines",
+    ],
+    quote:
+      "Every resident receives care that honors their preferences, comfort level, and personal dignity.",
+    chip: "Independence First",
+    image: "/images/assisted.jpg",
+  },
+
+  {
+    id: "medication",
+    type: "B",
+    icon: FaPills,
+    title: "Medication Assistance (as permitted by law)",
+    description:
+      "Our trained caregivers follow Washington State guidelines to ensure safe and accurate medication support while maintaining clear communication with families and healthcare providers.",
+    bullets: [
+      "Medication reminders",
+      "Assistance with self-administration",
+      "Pharmacy and provider coordination",
+      "Monitoring for changes in condition",
+    ],
+    badges: ["WA State Compliant", "Family Notified", "Pharmacy Coordinated"],
+    quote: "Consistent, safe, and always communicated clearly.",
+    chip: "Safe & Reliable",
+    image: "/images/medical-partnership.jpg",
+  },
+
+  {
+    id: "meals",
+    type: "A",
+    icon: FaUtensils,
+    title: "Meal Preparation & Nutrition Support",
+    description:
+      "We prepare fresh, balanced meals tailored to dietary needs and personal preferences in a warm, family-style environment.",
+    bullets: [
+      "Home-cooked meals and snacks",
+      "Special diets (diabetic, low-sodium, soft foods)",
+      "Hydration monitoring",
+      "Cultural and personal preferences",
+    ],
+    quote: "Meals served family-style — because food is connection.",
+    chip: "Home-Cooked Daily",
+    image: "/images/home-cooked.jpg",
+  },
+
+  {
+    id: "housekeeping",
+    type: "B",
+    icon: FaBroom,
+    title: "Housekeeping & Laundry Services",
+    description:
+      "We maintain a clean, safe, and peaceful home environment so residents can focus on comfort and well-being.",
+    bullets: [
+      "Daily tidying and sanitation",
+      "Weekly housekeeping",
+      "Personal laundry and linens",
+      "Organized living spaces",
+    ],
+    quote: "Residents live freely — without the weight of household chores.",
+    chip: "Clean · Safe · Peaceful",
+    image: "/images/houseKeeping.jpg",
+  },
+
+  {
+    id: "memory-care",
+    type: "A",
+    icon: FaBrain,
+    title: "Specialized Memory Care & Developmental Support",
+    description:
+      "We support residents living with dementia, Alzheimer’s, and developmental disabilities in a calm, structured and compassionate environment.",
+    bullets: [
+      "Structured routines for stability",
+      "Gentle redirection techniques",
+      "Memory-support activities",
+      "Calm predictable environment",
+      "Specialized caregiver training",
+    ],
+    quote:
+      "Our goal is to help every resident feel safe, understood, and at peace.",
+    chip: "Specialized Care",
+    image: "/images/memory.jpg",
+  },
+
+  {
+    id: "healthcare",
+    type: "B",
+    icon: FaHeartbeat,
+    title: "Coordination with Healthcare Providers",
+    description:
+      "We partner with families and healthcare professionals to ensure consistent, high-quality care and communication.",
+    bullets: [
+      "Condition monitoring",
+      "Fall prevention practices",
+      "Appointment coordination",
+      "Provider communication",
+      "Care transition support",
+    ],
+    quote:
+      "We act as partners — not just caregivers — in your loved one's health.",
+    chip: "Family Always Informed",
+    image: "/images/healthcare2.jpg",
+  },
+
+  {
+    id: "activities",
+    type: "B",
+    icon: FaUsers,
+    title: "Social & Recreational Activities",
+    description:
+      "We promote emotional well-being through meaningful engagement, companionship, and joyful daily interaction.",
+    bullets: [
+      "One-on-one companionship",
+      "Light hobbies and activities",
+      "Social interaction and conversation",
+      "Celebrations and events",
+      "Encouraged participation in routines",
+    ],
+    quote: "Emotional well-being is just as important as physical care.",
+    chip: "Community & Companionship",
+    image: "/images/recreation1.jpg",
+  },
+
+  {
+    id: "safety",
+    type: "A",
+    icon: FaHome,
+    title: "A Safe, Comfortable Home Environment",
+    description:
+      "Our home is designed to provide safety, dignity, and comfort in a peaceful and welcoming environment.",
+    bullets: [
+      "Peaceful home atmosphere",
+      "Private or semi-private rooms",
+      "Safe indoor/outdoor spaces",
+      "Family-oriented community",
+    ],
+    quote:
+      "Everything we do is centered on comfort, dignity, and quality of life.",
+    chip: "Home-Like Living",
+    image: "/images/safe.jpg",
+  },
+];
+
+export const memoryCareItems = [
+  {
+    icon: FaBrain,
+    title: "Structured Routines",
+    text: "Predictable daily schedules help residents feel secure.",
+  },
+  {
+    icon: FaShieldAlt,
+    title: "Safe Environment",
+    text: "Designed to reduce confusion and support independence.",
+  },
+  {
+    icon: FaHandHoldingHeart,
+    title: "Compassionate Support",
+    text: "Patience, dignity and understanding guide every interaction.",
+  },
+  {
+    icon: FaUsers,
+    title: "Family Partnership",
+    text: "Families remain involved throughout the care journey.",
+  },
+  {
+    icon: FaClipboardList,
+    title: "Individualized Plans",
+    text: "Care strategies tailored to each resident's needs.",
   },
 ];
