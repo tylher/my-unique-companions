@@ -418,7 +418,7 @@ export const detailedServices = [
     ],
     quote: "Residents live freely — without the weight of household chores.",
     chip: "Clean · Safe · Peaceful",
-    image: "/images/houseKeeping.jpg",
+    image: "/images/house-keeping.jpg",
   },
 
   {
