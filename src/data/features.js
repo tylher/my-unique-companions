@@ -5,6 +5,8 @@ import {
   MdChat,
   MdCleaningServices,
   MdCottage,
+  MdDiversity3,
+  MdFamilyRestroom,
   MdFavorite,
   MdFavoriteBorder,
   MdGroup,
@@ -12,6 +14,8 @@ import {
   MdHealthAndSafety,
   MdHome,
   MdLocalHospital,
+  MdLogin,
+  MdLogout,
   MdMedication,
   MdOutlineFavorite,
   MdOutlineHome,
@@ -21,6 +25,7 @@ import {
   MdRestaurant,
   MdVerified,
   MdVisibility,
+  MdWbSunny,
 } from "react-icons/md";
 
 import {
@@ -46,7 +51,7 @@ export const features = [
     title: "Compassionate Personalized Care",
     description:
       "Our team is dedicated to providing care with genuine heart and professional excellence, tailored to unique needs.",
-    icon: "https://lh3.googleusercontent.com/aida/AP1WRLsBflAzjWhx-E33bwJmbJSG6YkJr2dB_kKr-fAMi3VqjX6uPNnwbr-4vNTwi3Pp8117X0lVbxAoXoMaZg-N8jKPw3d6uetWTCggNd53rE99w2T_iub_yRTgG1ERbyG17K8oQ0ZNI_klEaG5hJkrRcmngfNfjV-5IiroL34a3hrQOvj74azJ-oGiOocjLCoydt_YLFxz1XtQjrCcL6zW-UQQVt4OTQefmjE1LNX6bLf0kYEwHSH16uVP_1g",
+    icon: "/images/icons/compassion.png",
     iconAlt: "Compassion Icon",
     iconBg: "bg-secondary-container/10",
   },
@@ -55,7 +60,7 @@ export const features = [
     title: "Home-Like Environment",
     description:
       "A premium residential environment that prioritizes comfort and safety over clinical routine.",
-    icon: "https://lh3.googleusercontent.com/aida/AP1WRLuaYoFkXC2e-xgA8MCwEk-gcJANv31vDpo5TaQBsBV1-892ERWDiaRHlTWeW8G-LxqvvwTRkY1ahpOEd8UnbYtHhZhNABj7GSojMWNo5-KbhliaQAAzBIg7Gga8_wERlYdzCTiEd7JEcujtQJWS-_K0viW6ID7Wu4fieADXYFkE2eFhvNXad7cyhxF7PA8l6M8xmZt_ojGDwrJL3uaepDLgw_BJIe56RD-azJa-X9iJgs77EvC8Qakn36r_",
+    icon: "/images/icons/family-care.png",
     iconAlt: "Home-Like Setting Icon",
     iconBg: "bg-primary/5",
   },
@@ -64,7 +69,7 @@ export const features = [
     title: "Dignity & Independence",
     description:
       "Empowering residents to maintain their independence while providing respectful, supportive care.",
-    icon: "https://lh3.googleusercontent.com/aida/AP1WRLsqbLUXMNlH8f2FOZD1qE8xiGejmYkof6i868MYdDq2j-JQ-xDefGjW6geELyU6dQ1xRc8wGUVIsCf4Xt69DklAHFA4_rhB8BBbmCB_EyLn4ws4j3vDW7IkbR_mNhGTcw0T9kLf078NHmf_e53uNaME8Ws8BiybAzFLDbCIJTUQrDD868bCb9PFhSDOax2BkPWYcIJE2AkN3ZiSec-NE-5QH1_-8oqcPxK0AWJPWgN7dSNwQQWJrSxJP8i4",
+    icon: "/images/icons/personalized-care.png",
     iconAlt: "Dignity Icon",
     iconBg: "bg-primary/5",
   },
@@ -73,7 +78,7 @@ export const features = [
     title: "Open Family Communication",
     description:
       "Keeping families informed and involved through transparent communication and regular updates.",
-    icon: "https://lh3.googleusercontent.com/aida/AP1WRLujfdgVLx9V1YJOB5lBRMOpvgAuH0OKhdcTU8nnJlpk2tyGCpFZwkelJSvtI7tugSl9K6LLOvC7uT0xrlFiKRIhkvI3g10m-gEWjc1VUGwy5CY5bNOTUn0R2eVflOQ79oNrtuckblRClAUa_n1uXDmzVTNzcYCcCSPsfaIM3p5UKTkpKi-1EIP_RUEyGzuPBmEda-zjQUiYpFdz4Cl4C9RffKhBR0Fz73u1gyUrv2YBxY7ow75QnmjfwHk",
+    icon: "/images/icons/family-care.png",
     iconAlt: "Family Communication Icon",
     iconBg: "bg-primary/5",
   },
@@ -443,7 +448,7 @@ export const detailedServices = [
 
   {
     id: "healthcare",
-    type: "B",
+    type: "A",
     icon: FaHeartbeat,
     title: "Coordination with Healthcare Providers",
     description:
@@ -526,4 +531,75 @@ export const memoryCareItems = [
     title: "Individualized Plans",
     text: "Care strategies tailored to each resident's needs.",
   },
+];
+
+export const dayInTheLife = [
+  {
+    id: 1,
+    icon: MdLogin,
+    title: "Start Your Shift",
+    description: "A warm greeting and handoff to ensure continuity of care.",
+  },
+  {
+    id: 2,
+    icon: MdWbSunny,
+    title: "Morning Care",
+    description:
+      "Assisting residents with their morning routines with patience and dignity.",
+  },
+  {
+    id: 3,
+    icon: MdRestaurant,
+    title: "Meals & Support",
+    description: "Nutritious, home-cooked meals served family-style.",
+  },
+  {
+    id: 4,
+    icon: MdDiversity3,
+    title: "Activities & Companionship",
+    description:
+      "Engaging in meaningful moments, from games to quiet conversation.",
+  },
+  {
+    id: 5,
+    icon: MdFamilyRestroom,
+    title: "Family Updates",
+    description:
+      "Keeping loved ones connected and informed throughout the day.",
+  },
+  {
+    id: 6,
+    icon: MdLogout,
+    title: "Heading Home",
+    description: "A final check-in and documentation before passing the baton.",
+  },
+];
+export const responsibilities = [
+  "Assisting with bathing, dressing, grooming, and mobility",
+  "Providing meal assistance and hydration support",
+  "Supporting residents with toileting and incontinence care",
+  "Offering companionship, conversation, and emotional support",
+  "Preparing meals and light housekeeping",
+  "Monitoring resident well being and reporting changes",
+  "Assisting with medication under state guidelines",
+  "Maintaining a safe, calm, and respectful environment",
+];
+
+export const qualifications = [
+  "Compassionate and patient",
+  "Reliable and committed",
+  "Respectful and professional",
+  "Able to work independently and as part of a team",
+  "Comfortable supporting residents with varying needs",
+];
+
+export const credentials = [
+  "Washington State HCA, CNA, or willingness to obtain certification",
+  "CPR/First Aid certification",
+  "Nurse delegation",
+  "Food handlers permit",
+  "Specialty care (Mental health and Dementia)",
+  "Background check clearance",
+  "TB test",
+  "Valid identification and eligibility to work in the U.S.",
 ];

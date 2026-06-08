@@ -7,9 +7,13 @@ const ExpectationCard = ({ title, description, icon: Icon }) => {
         </span>
       </div>
 
-      <h3 className="font-headline-sm text-primary mb-3">{title}</h3>
+      <h3 className=" text-primary mb-3 text-2xl font-display font-semibold">
+        {title}
+      </h3>
 
-      <p className="font-body-md text-on-surface-variant">{description}</p>
+      <p className="font-body text-on-surface-variant text-sm">
+        {description}
+      </p>
     </div>
   );
 };

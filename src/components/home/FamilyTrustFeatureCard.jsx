@@ -15,9 +15,13 @@ const FamilyTrustFeatureCard = ({ title, description, iconSrc, iconAlt }) => {
         />
       </div>
 
-      <h3 className="font-headline-sm text-primary">{title}</h3>
+      <h3 className="font-display text-primary font-semibold text-xl">
+        {title}
+      </h3>
 
-      <p className="font-body text-on-surface-variant">{description}</p>
+      <p className="font-body text-on-surface-variant font-medium text-sm">
+        {description}
+      </p>
     </div>
   );
 };
