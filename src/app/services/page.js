@@ -45,12 +45,6 @@ const ServicesPage = () => {
             case "memory-care":
               return <MemoryCareSection key={index} />;
 
-            // case "timeline":
-            //   return <TypicalDayTimeline key={index} />;
-
-            // case "stats":
-            //   return <StatsStrip key={index} />;
-
             case "cta":
               return <CTABanner key={index} />;
 

@@ -5,6 +5,7 @@ import {
   MdChat,
   MdCleaningServices,
   MdCottage,
+  MdDiversity1,
   MdDiversity3,
   MdFamilyRestroom,
   MdFavorite,
@@ -16,14 +17,18 @@ import {
   MdLocalHospital,
   MdLogin,
   MdLogout,
+  MdLuggage,
+  MdMedicalServices,
   MdMedication,
   MdOutlineFavorite,
   MdOutlineHome,
   MdOutlineSelfImprovement,
   MdPeopleOutline,
   MdPsychology,
+  MdRecordVoiceOver,
   MdRestaurant,
   MdVerified,
+  MdVerifiedUser,
   MdVisibility,
   MdWbSunny,
 } from "react-icons/md";
@@ -602,4 +607,59 @@ export const credentials = [
   "Background check clearance",
   "TB test",
   "Valid identification and eligibility to work in the U.S.",
+];
+
+export const residentRights = [
+  {
+    icon: MdVerifiedUser,
+    title: "Dignity & Respect",
+    description:
+      "To be treated with unwavering courtesy, maintaining privacy in personal care and communication.",
+  },
+  {
+    icon: MdDiversity1,
+    title: "Care Decisions",
+    description:
+      "To fully participate in planning care and treatments, and to be fully informed of all health status changes.",
+  },
+  {
+    icon: MdMedicalServices,
+    title: "Safe Care",
+    description:
+      "To reside in a physically safe, clean environment free from abuse, neglect, or unreasonable restraint.",
+  },
+  {
+    icon: MdRecordVoiceOver,
+    title: "Voice Concerns",
+    description:
+      "To file complaints or voice grievances without fear of discrimination, reprisal, or compromised care.",
+  },
+  {
+    icon: MdLuggage,
+    title: "Personal Belongings",
+    description:
+      "To retain and use personal possessions as space permits, creating a truly personalized living area.",
+  },
+  {
+    icon: MdFamilyRestroom,
+    title: "Family Visits",
+    description:
+      "To receive visitors of their choosing, ensuring enduring connections with family and friends.",
+  },
+];
+
+export const moveInRequirements = [
+  "Detailed Medical History",
+  "Current Medication List",
+  "Primary Care Physician Info",
+  "Insurance Cards & POLST",
+  "Dietary Restrictions/Preferences",
+  "Emergency Contacts",
+  "Personal Biography (Likes, dislikes, routines)",
+];
+
+export const engagementItems = [
+  "Resident privacy",
+  "Family involvement",
+  "Daily routines and care needs",
 ];
