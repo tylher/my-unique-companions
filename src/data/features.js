@@ -15,15 +15,18 @@ import {
   MdHealthAndSafety,
   MdHome,
   MdLocalHospital,
+  MdLocationOn,
   MdLogin,
   MdLogout,
   MdLuggage,
+  MdMail,
   MdMedicalServices,
   MdMedication,
   MdOutlineFavorite,
   MdOutlineHome,
   MdOutlineSelfImprovement,
   MdPeopleOutline,
+  MdPhone,
   MdPsychology,
   MdRecordVoiceOver,
   MdRestaurant,
@@ -662,4 +665,38 @@ export const engagementItems = [
   "Resident privacy",
   "Family involvement",
   "Daily routines and care needs",
+];
+
+export const contactInterests = [
+  "Scheduling a Tour",
+  "General Care Inquiry",
+  "Pricing & Availability",
+  "Careers",
+];
+
+export const contactDetails = [
+  {
+    icon: MdLocationOn,
+    title: "Our Residence",
+    content: (
+      <>
+        1234 Serenity Lane
+        <br />
+        Bellevue, WA 98004
+      </>
+    ),
+  },
+  {
+    icon: MdPhone,
+    title: "Phone",
+    link: "tel:+15551234567",
+    text: "(555) 123-4567",
+    subtitle: "Available 9am - 6pm daily",
+  },
+  {
+    icon: MdMail,
+    title: "Email",
+    link: "mailto:hello@uniquecompanions.com",
+    text: "hello@uniquecompanions.com",
+  },
 ];
