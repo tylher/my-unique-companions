@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaCircle } from "react-icons/fa";
@@ -13,22 +14,23 @@ const fadeUp = (delay = 0) => ({
 export default function CareersHero() {
   return (
     <section className="relative overflow-hidden bg-primary">
-      <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-secondary-container/30 blur-[150px]" />
-      <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-[#bac3ff]/10 blur-[150px]" />
+      {/* Background Blobs (responsive scale only, same design) */}
+      <div className="absolute top-0 right-0 h-56 w-56 sm:h-80 sm:w-80 md:h-[500px] md:w-[500px] rounded-full bg-secondary-container/30 blur-[150px]" />
+      <div className="absolute bottom-0 left-0 h-56 w-56 sm:h-72 sm:w-72 md:h-[400px] md:w-[400px] rounded-full bg-[#bac3ff]/10 blur-[150px]" />
 
-      <div className="container mx-auto px-10 py-16 w-full min-h-screen flex items-center">
-        <div className="flex gap-16 items-center w-full">
-          {/* Content */}
-          <div className="relative z-10 w-1/2">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 py-14 md:py-16 w-full min-h-screen flex items-center">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center w-full">
+          {/* ================= TEXT ================= */}
+          <div className="relative z-10 w-full md:w-1/2">
             <motion.p
-              className="tracking-[0.2em] text-sm font-semibold text-secondary-container font-body"
+              className="tracking-[0.2em] text-[11px] sm:text-xs md:text-sm font-semibold text-secondary-container font-body"
               {...fadeUp(0.1)}
             >
               CAREGIVER OPPORTUNITIES · WASHINGTON STATE
             </motion.p>
 
             <motion.h1
-              className="mt-6 font-display text-3xl md:text-6xl text-white leading-tight font-semibold"
+              className="mt-5 md:mt-6 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight font-semibold"
               {...fadeUp(0.2)}
             >
               Caregivers Are the{" "}
@@ -36,7 +38,7 @@ export default function CareersHero() {
             </motion.h1>
 
             <motion.p
-              className="mt-5 text-lg leading-relaxed text-[#bac3ff] max-w-xl"
+              className="mt-4 md:mt-5 text-sm sm:text-base md:text-lg leading-relaxed text-[#bac3ff] max-w-xl"
               {...fadeUp(0.32)}
             >
               We're looking for compassionate, dedicated individuals who believe
@@ -44,9 +46,13 @@ export default function CareersHero() {
               you want to make a real difference every day — this is your place.
             </motion.p>
 
-            <motion.div className="mt-5 flex flex-wrap gap-4" {...fadeUp(0.42)}>
+            {/* Buttons */}
+            <motion.div
+              className="mt-5 flex flex-col sm:flex-row gap-3 sm:gap-4"
+              {...fadeUp(0.42)}
+            >
               <motion.button
-                className="rounded-lg bg-white text-sm font-body px-8 py-2 font-medium text-primary shadow-[0_10px_30px_rgba(253,113,55,0.35)] transition"
+                className="rounded-lg bg-white text-sm font-body px-6 sm:px-8 py-2.5 sm:py-2 font-medium text-primary shadow-[0_10px_30px_rgba(253,113,55,0.35)] w-full sm:w-auto"
                 whileHover={{ y: -3, scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 350, damping: 18 }}
@@ -55,7 +61,7 @@ export default function CareersHero() {
               </motion.button>
 
               <motion.button
-                className="rounded-lg border-2 text-sm font-body border-secondary hover:bg-secondary px-8 py-2 text-white backdrop-blur"
+                className="rounded-lg border-2 text-sm font-body border-secondary hover:bg-secondary px-6 sm:px-8 py-2.5 sm:py-2 text-white backdrop-blur w-full sm:w-auto"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 350, damping: 18 }}
@@ -64,9 +70,9 @@ export default function CareersHero() {
               </motion.button>
             </motion.div>
 
-            {/* Culture strip — staggered icons */}
+            {/* Culture strip */}
             <motion.div
-              className="mt-6 flex flex-wrap items-center gap-4 text-sm text-[#bac3ff] font-body"
+              className="mt-5 md:mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] sm:text-sm text-[#bac3ff] font-body"
               initial="hidden"
               animate="visible"
               variants={{
@@ -91,7 +97,9 @@ export default function CareersHero() {
                 >
                   {i > 0 && (
                     <FaCircle
-                      className={`inline text-[6px] mr-4 ${i === 3 ? "text-[#fd7137]" : "text-secondary-container"}`}
+                      className={`inline text-[6px] mr-3 ${
+                        i === 3 ? "text-[#fd7137]" : "text-secondary-container"
+                      }`}
                     />
                   )}
                   {item}
@@ -100,25 +108,26 @@ export default function CareersHero() {
             </motion.div>
           </div>
 
-          {/* Visual */}
+          {/* ================= IMAGE ================= */}
           <motion.div
-            className="relative w-1/2 overflow-hidden"
+            className="relative w-full md:w-1/2 overflow-hidden hidden md:block"
             initial={{ opacity: 0, x: 40, scale: 0.97 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="h-162.5 rounded-4xl bg-linear-to-br from-tertiary-container via-on-primary-fixed-variant to-surface-tint shadow-2xl overflow-hidden px-6">
-              <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-primary/80 to-transparent" />
+            <div className="relative h-[420px] lg:h-[560px] rounded-3xl md:rounded-4xl bg-linear-to-br from-tertiary-container via-on-primary-fixed-variant to-surface-tint shadow-2xl overflow-hidden px-6">
+              <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-primary/80 to-transparent z-10" />
+
               <Image
                 src="/images/caregiver1.jpg"
                 fill
-                className="object-cover rounded-4xl"
+                className="object-cover rounded-3xl md:rounded-4xl"
                 alt="Caregiver"
               />
 
-              {/* Overlay badge — slides up after image loads */}
+              {/* Badge */}
               <motion.div
-                className="absolute bottom-6 left-6 w-[calc(100%-48px)]"
+                className="absolute bottom-6 left-6 w-[calc(100%-48px)] z-20"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -127,17 +136,18 @@ export default function CareersHero() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                <div className="flex items-center justify-between gap-3 rounded-2xl border-none bg-white/5 backdrop-blur-lg px-10 py-6 relative overflow-hidden">
-                  <div className="text-white z-10">
-                    <h2 className="font-display text-lg text-on-primary">
+                <div className="flex items-center justify-between gap-3 rounded-2xl bg-white/5 backdrop-blur-lg px-5 sm:px-6 md:px-10 py-4 md:py-6">
+                  <div className="text-white">
+                    <h2 className="font-display text-sm sm:text-base md:text-lg text-on-primary">
                       Now Hiring
                     </h2>
-                    <p className="font-body text-sm text-primary-fixed-dim">
+                    <p className="font-body text-[11px] sm:text-xs md:text-sm text-primary-fixed-dim">
                       Washington State
                     </p>
                   </div>
+
                   <motion.div
-                    className="bg-secondary-container text-on-secondary rounded-full p-3 shadow-lg"
+                    className="bg-secondary-container text-on-secondary rounded-full p-2 md:p-3 shadow-lg"
                     animate={{ x: [0, 4, 0] }}
                     transition={{
                       repeat: Infinity,
@@ -146,9 +156,7 @@ export default function CareersHero() {
                       delay: 1.2,
                     }}
                   >
-                    <span className="text-[24px]">
-                      <MdArrowForward />
-                    </span>
+                    <MdArrowForward className="text-lg md:text-2xl" />
                   </motion.div>
                 </div>
               </motion.div>
@@ -157,11 +165,11 @@ export default function CareersHero() {
         </div>
       </div>
 
-      {/* Wave */}
+      {/* Wave (responsive height preserved) */}
       <svg
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="block h-30 w-full"
+        className="block h-14 sm:h-20 md:h-30 w-full"
       >
         <path
           fill="#f7f9fb"

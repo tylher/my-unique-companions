@@ -47,13 +47,11 @@ const ApplicationFormModal = forwardRef(
 
       return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-
         xhr.upload.addEventListener("progress", (e) => {
           if (e.lengthComputable) {
             onProgress(Math.round((e.loaded / e.total) * 100));
           }
         });
-
         xhr.addEventListener("load", () => {
           if (xhr.status === 200) {
             const data = JSON.parse(xhr.responseText);
@@ -62,11 +60,9 @@ const ApplicationFormModal = forwardRef(
             reject(new Error("Cloudinary upload failed"));
           }
         });
-
         xhr.addEventListener("error", () =>
           reject(new Error("Network error during upload")),
         );
-
         xhr.open(
           "POST",
           `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/raw/upload`,
@@ -99,10 +95,8 @@ const ApplicationFormModal = forwardRef(
       }
       setErrors({});
       setSubmitting(true);
-      console.log("submitting..");
 
       try {
-        // 1. Upload resume to Cloudinary
         let resumeUrl = "";
         if (resumeFile) {
           setResumeError(null);
@@ -115,7 +109,6 @@ const ApplicationFormModal = forwardRef(
           }
         }
 
-        // 2. Upload certification to Cloudinary (optional)
         let certUrl = "";
         if (certFile) {
           setCertError(null);
@@ -128,7 +121,6 @@ const ApplicationFormModal = forwardRef(
           }
         }
 
-        // 3. Submit to Formspree with file URLs as plain text
         const payload = new FormData();
         payload.append("full_name", fields.full_name);
         payload.append("email", fields.email);
@@ -155,18 +147,17 @@ const ApplicationFormModal = forwardRef(
       }
     };
 
-
     return (
       <motion.div
         onClick={onCloseFromOutside}
-        className="backdrop-blur-2xl fixed w-screen h-screen z-50 top-0 left-0 bg-black/30 flex justify-center items-center"
+        className="backdrop-blur-2xl fixed w-screen h-screen z-50 top-0 left-0 bg-black/30 flex justify-center items-center p-4 sm:p-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.25 }}
       >
         {submitted ? (
-          <div className="mx-auto max-w-2xl rounded-3xl border border-[#e0e3e5] bg-white p-12 text-center shadow-[0_20px_60px_rgba(37,48,107,0.07)] ">
+          <div className="mx-auto max-w-2xl w-full rounded-3xl border border-[#e0e3e5] bg-white p-8 sm:p-12 text-center shadow-[0_20px_60px_rgba(37,48,107,0.07)]">
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#e1f5ee]">
               <MdCheckCircle className="text-4xl text-[#0f6e56]" />
             </div>
@@ -187,7 +178,7 @@ const ApplicationFormModal = forwardRef(
           </div>
         ) : (
           <motion.div
-            className="bg-white h-[90%] w-3/4 overflow-auto rounded-4xl scrollbar-none"
+            className="bg-white h-[95%] w-full sm:w-[90%] md:w-3/4 overflow-auto rounded-3xl sm:rounded-4xl scrollbar-none"
             ref={ref}
             initial={{ opacity: 0, y: 40, scale: 0.97 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -196,25 +187,25 @@ const ApplicationFormModal = forwardRef(
           >
             {/* Header */}
             <motion.div
-              className="px-7 py-10 mx-auto text-center bg-primary text-on-primary flex flex-col gap-5"
+              className="px-5 sm:px-7 py-8 sm:py-10 mx-auto text-center bg-primary text-on-primary flex flex-col gap-3 sm:gap-5"
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.4, ease: "easeOut" }}
             >
-              <h2 className="font-display text-5xl font-semibold">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold">
                 We'd love to meet you
               </h2>
-              <p className="font-body text-primary-fixed-dim text-lg mx-auto max-w-137.5">
+              <p className="font-body text-primary-fixed-dim text-base sm:text-lg mx-auto max-w-137.5">
                 Join our team of dedicated caregivers providing premium,
                 compassionate support
               </p>
             </motion.div>
 
-            <div className="py-10">
+            <div className="py-8 sm:py-10">
               <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="px-10 flex flex-col gap-5"
+                className="px-5 sm:px-10 flex flex-col gap-5"
                 encType="application/x-www-form-urlencoded"
               >
                 {[
@@ -227,23 +218,21 @@ const ApplicationFormModal = forwardRef(
                   { type: "tel", placeholder: "Phone Number", name: "phone" },
                 ].map((field, i) => (
                   <Field
+                    key={field.name}
                     required={true}
                     error={errors[`${field.name}`]}
                     label={field.placeholder}
                   >
                     <motion.input
-                      key={field.placeholder}
                       type={field.type}
                       name={field.name}
                       placeholder={field.placeholder}
                       value={fields[`${field.name}`]}
-                      className="w-full rounded-lg border border-outline-variant px-4 py-4 outline-none focus:ring-2 focus:ring-primary-container"
+                      className="w-full rounded-lg border border-outline-variant px-4 py-3 sm:py-4 outline-none focus:ring-2 focus:ring-primary-container text-sm sm:text-base"
                       custom={i}
                       onChange={(e) => {
                         const val = e.target.value;
-                        setFields((prev) => {
-                          return { ...prev, [field.name]: val };
-                        });
+                        setFields((prev) => ({ ...prev, [field.name]: val }));
                       }}
                       variants={fieldVariants}
                       initial="hidden"
@@ -261,20 +250,19 @@ const ApplicationFormModal = forwardRef(
                     rows={4}
                     name="availability"
                     placeholder="Tell us about your availability..."
-                    className="w-full rounded-lg border border-outline-variant px-4 py-4 outline-none focus:ring-2 focus:ring-primary-container"
+                    className="w-full rounded-lg border border-outline-variant px-4 py-3 sm:py-4 outline-none focus:ring-2 focus:ring-primary-container text-sm sm:text-base"
                     custom={3}
                     variants={fieldVariants}
                     initial="hidden"
                     animate="visible"
                     onChange={(e) => {
                       const val = e.target.value;
-                      setFields((prev) => {
-                        return { ...prev, availability: val };
-                      });
+                      setFields((prev) => ({ ...prev, availability: val }));
                     }}
                   />
                 </Field>
 
+                {/* Upload zones — stack on mobile, grid on md+ */}
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <UploadZone
@@ -292,7 +280,6 @@ const ApplicationFormModal = forwardRef(
                       uploadProgress={resumeProgress}
                       uploadError={resumeError}
                     />
-
                     {errors.resume && (
                       <p className="mt-1.5 flex items-center gap-1 text-[11px] text-[#ba1a1a]">
                         <MdError className="text-xs" /> {errors.resume}
@@ -325,7 +312,7 @@ const ApplicationFormModal = forwardRef(
                     initial="hidden"
                     animate="visible"
                   >
-                    <div className="relative mt-1 flex items-center justify-center">
+                    <div className="relative mt-1 flex items-center justify-center shrink-0">
                       <input
                         type="checkbox"
                         checked={fields.consent}
@@ -339,14 +326,14 @@ const ApplicationFormModal = forwardRef(
                       />
                       <div
                         className={`flex h-5 w-5 items-center justify-center rounded border-2 transition-all duration-200
-                  ${
-                    fields.consent
-                      ? "border-[#25306b] bg-[#25306b]"
-                      : errors.consent
-                        ? "border-red-400 bg-red-50"
-                        : "border-[#c6c5d1] bg-white"
-                  }
-                `}
+                          ${
+                            fields.consent
+                              ? "border-[#25306b] bg-[#25306b]"
+                              : errors.consent
+                                ? "border-red-400 bg-red-50"
+                                : "border-[#c6c5d1] bg-white"
+                          }
+                        `}
                       >
                         {fields.consent && (
                           <svg
@@ -366,7 +353,7 @@ const ApplicationFormModal = forwardRef(
                         )}
                       </div>
                     </div>
-                    <span className="select-none pt-0.5 font-body-md text-body-md text-on-surface-variant">
+                    <span className="select-none pt-0.5 font-body-md text-body-md text-on-surface-variant text-sm sm:text-base">
                       I confirm that the information provided is accurate and
                       consent to Unique Companions AFH storing my data for
                       recruitment purposes in accordance with their{" "}
@@ -394,17 +381,10 @@ const ApplicationFormModal = forwardRef(
                   </div>
                 )}
 
-                {/* <motion.div
-                className="flex flex-col gap-4 pt-4 sm:flex-row items-center justify-center"
-                custom={5}
-                variants={fieldVariants}
-                initial="hidden"
-                animate="visible"
-              > */}
                 <motion.button
                   type="submit"
                   disabled={submitting || !fields.consent}
-                  className="rounded-lg bg-secondary-container px-6 py-4 font-medium text-white transition hover:bg-secondary"
+                  className="rounded-lg bg-secondary-container px-6 py-3 sm:py-4 font-medium text-white transition hover:bg-secondary text-sm sm:text-base"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 400, damping: 20 }}
@@ -436,19 +416,16 @@ const ApplicationFormModal = forwardRef(
                     "Submit My Application"
                   )}
                 </motion.button>
-                {/* </motion.div> */}
               </form>
 
               <motion.div
-                className="flex items-center gap-2 mt-4 text-on-surface-variant mx-auto text-center w-full justify-center"
+                className="flex items-center gap-2 mt-4 text-on-surface-variant mx-auto text-center w-full justify-center px-5 sm:px-10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.4 }}
               >
-                <span className="material-symbols-outlined text-[18px]">
-                  <MdLock />
-                </span>
-                <span className="font-label-md text-label-md text-sm">
+                <MdLock className="text-[18px]" />
+                <span className="font-label-md text-label-md text-xs sm:text-sm">
                   Your information is secure and confidential.
                 </span>
               </motion.div>

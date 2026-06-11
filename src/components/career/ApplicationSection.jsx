@@ -30,10 +30,10 @@ export default function ApplicationSection() {
   }, [isModalOpen]);
 
   return (
-    <section className="bg-[#f7f9fb] py-16">
-      <div className="mx-auto max-w-4xl px-6">
+    <section className="bg-[#f7f9fb] py-12 md:py-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <motion.div
-          className="relative overflow-hidden rounded-3xl bg-white p-8 shadow-[0_20px_60px_rgba(37,48,107,0.07)] md:p-12"
+          className="relative overflow-hidden rounded-3xl bg-white p-6 sm:p-8 shadow-[0_20px_60px_rgba(37,48,107,0.07)] md:p-12"
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -61,7 +61,7 @@ export default function ApplicationSection() {
             />
 
             <motion.h2
-              className="mb-4 font-display text-5xl font-semibold text-primary md:text-4xl"
+              className="mb-4 font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-primary"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -75,7 +75,7 @@ export default function ApplicationSection() {
             </motion.h2>
 
             <motion.p
-              className="mb-7 text-on-surface-variant font-body"
+              className="mb-7 text-on-surface-variant font-body text-sm sm:text-base"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -85,9 +85,9 @@ export default function ApplicationSection() {
               and we'll be in touch.
             </motion.p>
 
-            {/* Step cards — staggered */}
+            {/* Step cards */}
             <motion.div
-              className="mb-10 grid gap-4 md:grid-cols-2"
+              className="mb-8 md:mb-10 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
@@ -115,10 +115,10 @@ export default function ApplicationSection() {
                   }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
-                  <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-primary-fixed font-display font-medium text-primary-container">
+                  <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-primary-fixed font-display font-medium text-primary-container text-sm">
                     {String(index + 1).padStart(2, "0")}
                   </div>
-                  <h4 className="font-medium text-[#191c1e] font-body">
+                  <h4 className="font-medium text-[#191c1e] font-body text-sm sm:text-base">
                     {step}
                   </h4>
                 </motion.div>
@@ -126,8 +126,9 @@ export default function ApplicationSection() {
             </motion.div>
           </div>
 
+          {/* CTA buttons — full-width on mobile, auto on sm+ */}
           <motion.div
-            className="flex flex-col gap-4 pt-4 sm:flex-row font-body"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 font-body"
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -135,7 +136,7 @@ export default function ApplicationSection() {
           >
             <motion.button
               type="button"
-              className="rounded-lg bg-primary-container px-6 py-4 font-medium text-white transition hover:bg-primary w-50 flex items-center justify-center"
+              className="rounded-lg bg-primary-container px-6 py-4 font-medium text-white transition hover:bg-primary w-full sm:w-50 flex items-center justify-center text-sm sm:text-base"
               onClick={handleOpenModal}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
@@ -146,7 +147,7 @@ export default function ApplicationSection() {
 
             <motion.button
               type="button"
-              className="rounded-lg border border-secondary-container px-6 py-4 font-medium text-secondary-container hover:bg-secondary-container hover:text-white w-50 flex items-center justify-center"
+              className="rounded-lg border border-secondary-container px-6 py-4 font-medium text-secondary-container hover:bg-secondary-container hover:text-white w-full sm:w-50 flex items-center justify-center text-sm sm:text-base"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
               transition={{ type: "spring", stiffness: 380, damping: 18 }}

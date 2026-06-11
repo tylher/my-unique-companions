@@ -2,8 +2,8 @@ import { MdOutlineHome } from "react-icons/md";
 
 const ContactMap = () => {
   return (
-    <div className="bg-surface-container-lowest rounded-3xl p-2 shadow-xl border border-primary-fixed/50 overflow-hidden group">
-      <div className="relative w-full h-60 rounded-[20px] overflow-hidden bg-surface-container">
+    <div className="bg-surface-container-lowest rounded-2xl sm:rounded-3xl p-2 shadow-xl border border-primary-fixed/50 overflow-hidden group">
+      <div className="relative w-full h-48 sm:h-60 rounded-[16px] sm:rounded-[20px] overflow-hidden bg-surface-container">
         <img
           src="/images/contact-map.jpg"
           alt="Map View"
@@ -11,13 +11,8 @@ const ContactMap = () => {
         />
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="bg-primary text-on-primary rounded-full p-2 shadow-lg">
-            <span
-              className="material-symbols-outlined"
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
-              <MdOutlineHome/>
-            </span>
+          <div className="bg-primary text-on-primary rounded-full p-2 sm:p-3 shadow-lg">
+            <MdOutlineHome className="text-base sm:text-lg" />
           </div>
         </div>
       </div>

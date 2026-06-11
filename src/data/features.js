@@ -689,14 +689,30 @@ export const contactDetails = [
   {
     icon: MdPhone,
     title: "Phone",
-    link: "tel:+15551234567",
-    text: "(555) 123-4567",
+    data: [
+      {
+        link: "tel:+14255157787",
+        text: "(425) 515-7787",
+      },
+      {
+        link: "tel:+12533044293",
+        text: "(253) 304-4293",
+      },
+    ],
     subtitle: "Available 9am - 6pm daily",
   },
   {
     icon: MdMail,
     title: "Email",
-    link: "mailto:hello@uniquecompanions.com",
-    text: "hello@uniquecompanions.com",
+    data: [
+      {
+        link: "mailto:uniquecompanionsafh@gmail.com ",
+        text: "uniquecompanionsafh@gmail.com ",
+      },
+      {
+        link: "mailto:info@uniquecompanions.com",
+        text: "info@uniquecompanions.com",
+      },
+    ],
   },
 ];

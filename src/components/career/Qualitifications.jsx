@@ -1,4 +1,5 @@
 "use client";
+
 import { credentials, qualifications } from "@/data/features";
 import { motion } from "framer-motion";
 import { MdCheckCircle } from "react-icons/md";
@@ -8,16 +9,21 @@ const rowVariants = {
   visible: (i) => ({
     opacity: 1,
     x: 0,
-    transition: { delay: i * 0.06, duration: 0.38, ease: [0.22, 1, 0.36, 1] },
+    transition: {
+      delay: i * 0.06,
+      duration: 0.38,
+      ease: [0.22, 1, 0.36, 1],
+    },
   }),
 };
 
 export default function QualificationsSection() {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-4xl mx-auto px-6">
+    <section className="py-14 sm:py-16 lg:py-20 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
+        {/* ================= TITLE ================= */}
         <motion.h2
-          className="text-3xl md:text-5xl font-semibold font-display text-primary text-center mb-4"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold font-display text-primary text-center mb-4"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -26,17 +32,20 @@ export default function QualificationsSection() {
           Who We're Looking For
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-10 mt-10">
-          {/* Personal Qualities */}
+        {/* ================= GRID ================= */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mt-10">
+          {/* ================= PERSONAL QUALITIES ================= */}
           <motion.div
             className="space-y-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-40px" }}
-            variants={{ visible: { transition: { staggerChildren: 0 } } }}
+            variants={{
+              visible: { transition: { staggerChildren: 0 } },
+            }}
           >
             <motion.h3
-              className="text-lg font-semibold font-display text-primary mb-4"
+              className="text-base sm:text-lg font-semibold font-display text-primary mb-4"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -48,17 +57,16 @@ export default function QualificationsSection() {
             {qualifications.map((item, index) => (
               <motion.div
                 key={index}
-                className="flex items-start gap-3 border-b border-surface-container-low pb-3"
                 custom={index}
                 variants={rowVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 whileHover={{ x: 4 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="flex items-start gap-3 border-b border-surface-container-low pb-3"
               >
                 <motion.span
-                  className="w-5 h-5 rounded bg-primary-fixed flex items-center justify-center mt-1"
+                  className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-primary-fixed flex items-center justify-center mt-1 shrink-0"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -69,25 +77,28 @@ export default function QualificationsSection() {
                     damping: 16,
                   }}
                 >
-                  <MdCheckCircle className="text-primary-container text-sm" />
+                  <MdCheckCircle className="text-primary-container text-[10px] sm:text-sm" />
                 </motion.span>
-                <p className="text-[#191c1e] font-script text-sm font-medium">
+
+                <p className="text-[#191c1e] font-script text-xs sm:text-sm font-medium leading-relaxed">
                   {item}
                 </p>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Required Credentials */}
+          {/* ================= CREDENTIALS ================= */}
           <motion.div
             className="space-y-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-40px" }}
-            variants={{ visible: { transition: { staggerChildren: 0 } } }}
+            variants={{
+              visible: { transition: { staggerChildren: 0 } },
+            }}
           >
             <motion.h3
-              className="text-lg font-semibold font-display text-primary mb-4"
+              className="text-base sm:text-lg font-semibold font-display text-primary mb-4"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -98,7 +109,6 @@ export default function QualificationsSection() {
 
             {credentials.map((credential, index) => (
               <motion.div
-                className="flex items-start gap-3 border-b border-surface-container-low pb-3"
                 key={index}
                 custom={index}
                 variants={{
@@ -117,10 +127,10 @@ export default function QualificationsSection() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 whileHover={{ x: -4 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="flex items-start gap-3 border-b border-surface-container-low pb-3"
               >
                 <motion.span
-                  className="w-5 h-5 rounded bg-secondary-fixed flex items-center justify-center"
+                  className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-secondary-fixed flex items-center justify-center mt-1 shrink-0"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -131,9 +141,10 @@ export default function QualificationsSection() {
                     damping: 16,
                   }}
                 >
-                  <MdCheckCircle className="text-secondary text-sm" />
+                  <MdCheckCircle className="text-secondary text-[10px] sm:text-sm" />
                 </motion.span>
-                <p className="text-[#191c1e] font-script text-sm font-medium">
+
+                <p className="text-[#191c1e] font-script text-xs sm:text-sm font-medium leading-relaxed">
                   {credential}
                 </p>
               </motion.div>
@@ -141,9 +152,9 @@ export default function QualificationsSection() {
           </motion.div>
         </div>
 
-        {/* Helper banner */}
+        {/* ================= BANNER ================= */}
         <motion.div
-          className="mt-16 bg-[#f7f9fb] border border-[#dee0ff] p-6 rounded-xl flex items-start gap-4"
+          className="mt-12 sm:mt-14 lg:mt-16 bg-[#f7f9fb] border border-[#dee0ff] p-4 sm:p-6 rounded-xl flex flex-col sm:flex-row items-start gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
@@ -154,7 +165,7 @@ export default function QualificationsSection() {
           }}
         >
           <motion.div
-            className="w-10 h-10 bg-[#dee0ff] rounded-lg flex items-center justify-center"
+            className="w-9 h-9 sm:w-10 sm:h-10 bg-[#dee0ff] rounded-lg flex items-center justify-center shrink-0"
             initial={{ rotate: -12, scale: 0.8 }}
             whileInView={{ rotate: 0, scale: 1 }}
             viewport={{ once: true }}
@@ -165,13 +176,14 @@ export default function QualificationsSection() {
               damping: 16,
             }}
           >
-            <MdCheckCircle className="text-[#25306b]" />
+            <MdCheckCircle className="text-[#25306b] text-sm sm:text-base" />
           </motion.div>
+
           <div>
-            <h4 className="font-semibold text-[#0d1955] mb-1">
+            <h4 className="font-semibold text-[#0d1955] text-sm sm:text-base mb-1">
               New to caregiving? We'll guide you.
             </h4>
-            <p className="text-[#454650]">
+            <p className="text-[#454650] text-xs sm:text-sm leading-relaxed">
               We support new caregivers through training and certification
               steps.
             </p>

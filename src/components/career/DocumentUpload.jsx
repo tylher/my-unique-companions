@@ -1,6 +1,12 @@
 "use client";
 import { useRef } from "react";
-import { MdCheckCircle, MdClose, MdError, MdInsertDriveFile, MdUpload } from "react-icons/md";
+import {
+  MdCheckCircle,
+  MdClose,
+  MdError,
+  MdInsertDriveFile,
+  MdUpload,
+} from "react-icons/md";
 
 export default function UploadZone({
   label,
@@ -46,7 +52,7 @@ export default function UploadZone({
     <label
       className={`
         group relative flex cursor-pointer flex-col items-center justify-center
-        rounded-2xl border-[1.5px] border-dashed p-8 transition-all duration-300
+        rounded-2xl border-[1.5px] border-dashed p-6 sm:p-8 transition-all duration-300
         ${
           uploadError
             ? "border-solid border-red-300 bg-red-50"
@@ -61,7 +67,7 @@ export default function UploadZone({
       {/* Icon ring */}
       <div
         className={`
-          mb-4 flex h-14 w-14 items-center justify-center rounded-full transition-colors duration-300
+          mb-3 md:mb-4 flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full transition-colors duration-300
           ${
             uploadError
               ? "bg-red-100"
@@ -72,11 +78,11 @@ export default function UploadZone({
         `}
       >
         {uploadError ? (
-          <MdError className="text-2xl text-red-500" />
+          <MdError className="text-xl md:text-2xl text-red-500" />
         ) : hasFile ? (
-          <MdInsertDriveFile className="text-2xl text-[#25306b]" />
+          <MdInsertDriveFile className="text-xl md:text-2xl text-[#25306b]" />
         ) : (
-          <MdUpload className="text-2xl text-[#25306b] transition-colors duration-300 group-hover:text-[#a83900]" />
+          <MdUpload className="text-xl md:text-2xl text-[#25306b] transition-colors duration-300 group-hover:text-[#a83900]" />
         )}
       </div>
 
@@ -87,7 +93,7 @@ export default function UploadZone({
         {uploadError ? "Upload failed" : label}
       </p>
 
-      {/* Hint / error message */}
+      {/* Hint */}
       <p className="mb-2 text-center text-xs text-[#767681] leading-relaxed">
         {uploadError ? uploadError : hint}
       </p>
@@ -105,7 +111,7 @@ export default function UploadZone({
           </span>
         ))}
 
-      {/* File confirmation row */}
+      {/* File row */}
       {hasFile && !uploadError && (
         <div className="mt-3 flex w-full items-center gap-2 rounded-xl border border-[#e0e3e5] bg-white px-3 py-2.5">
           <MdInsertDriveFile className="flex-shrink-0 text-base text-[#25306b]" />
@@ -117,7 +123,7 @@ export default function UploadZone({
           </span>
           <button
             onClick={handleRemove}
-            className="ml-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#ffdad6] transition-colors hover:bg-[#ffb4ab]"
+            className="ml-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#ffdad6] transition-colors hover:bg-[#ffb4ab]"
             aria-label={`Remove ${file.name}`}
             type="button"
           >
@@ -126,7 +132,7 @@ export default function UploadZone({
         </div>
       )}
 
-      {/* Upload progress bar */}
+      {/* Progress bar */}
       {uploadProgress !== null && uploadProgress < 100 && (
         <div className="mt-3 w-full">
           <div className="mb-1 flex justify-between">
@@ -146,7 +152,7 @@ export default function UploadZone({
         </div>
       )}
 
-      {/* Upload complete indicator */}
+      {/* Upload complete */}
       {uploadProgress === 100 && (
         <div className="mt-3 flex w-full items-center gap-2 rounded-xl bg-[#e1f5ee] px-3 py-2 border border-[#9fe1cb]">
           <MdCheckCircle className="text-sm text-[#0f6e56] flex-shrink-0" />

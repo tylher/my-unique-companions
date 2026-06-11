@@ -3,7 +3,7 @@ const VisionCard = ({ title, description, icon: Icon }) => {
     <div
       className="
         relative
-        w-60
+        w-full lg:w-60
         rounded-2xl
         bg-white
         border border-primary-fixed
@@ -15,17 +15,14 @@ const VisionCard = ({ title, description, icon: Icon }) => {
       "
     >
       <div className="h-2 bg-primary-fixed" />
-
-      <div className="p-6">
-        <div className="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center mb-5">
+      <div className="p-5 md:p-6">
+        <div className="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center mb-4 md:mb-5">
           <Icon className="text-primary-container text-2xl" />
         </div>
-
-        <h3 className="font-display text-2xl text-primary mb-3 font-semibold">
+        <h3 className="font-display text-xl md:text-2xl text-primary mb-2 md:mb-3 font-semibold">
           {title}
         </h3>
-
-        <p className="text-on-surface-variant leading-relaxed font-medium font-body">
+        <p className="text-on-surface-variant leading-relaxed font-medium font-body text-sm sm:text-base">
           {description}
         </p>
       </div>

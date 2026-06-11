@@ -5,62 +5,97 @@ import { MdArrowForward } from "react-icons/md";
 
 const HomePage = () => {
   return (
-    <section className="">
-      <div className="min-h-screen relative w-full flex items-center">
-        <div className="h-screen absolute w-full">
-          <Image
-            src={"/images/homeBg.jpg"}
-            alt="Home Background"
-            fill
-            className="object-cover"
-          />
-        </div>
+    <section>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/images/homeBg.jpg"
+          alt="Home Background"
+          fill
+          priority
+          className="object-cover"
+        />
 
-        <div className="absolute inset-0 bg-linear-to-tr from-gray-300/80 to-gray-700/5  z-10" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-gray-300/80 to-gray-700/5 z-10" />
 
-        <div className="z-10 relative mt-10 px-8 w-3/5 font-display flex flex-col gap-4">
-          <h1 className="text-[46px] text-primary font-bold leading-tight">
-            A Place That Feels Like Home.
-            <br />
-            <span className="text-primary/80 opacity-95 py-0.5">
-              Care That Feels Like Family.
-            </span>
-          </h1>
-          <p className="font-body text-gray-800 font-medium max-w-xl text-lg">
-            Compassionate, personalized adult family home care designed to
-            support dignity, independence, comfort, and meaningful connection
-            every day. Experience a setting that prioritizes warmth over
-            clinical routine.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button
-              className="bg-primary px-8 py-3 font-script text-sm inline-flex justify-center 
-            items-center rounded-2xl text-white shadow-[0_4px_12px_rgba(37,48,107,0.15)] font-medium
-            transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(37,48,107,0.25)]"
-            >
-              Schedule a Visit
-              <span className="material-symbols-outlined ml-2 text-lg">
-                <MdArrowForward />
+        {/* Content */}
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-0">
+          <div className="max-w-4xl">
+            <h1 className="text-primary font-bold leading-tight text-4xl sm:text-5xl lg:text-6xl">
+              A Place That Feels Like Home.
+              <br />
+              <span className="text-primary/80">
+                Care That Feels Like Family.
               </span>
-            </button>
-            <button
-              className="border-2 border-secondary text-secondary  px-8 py-3 
-            font-script text-sm inline-flex justify-center items-center rounded-2xl hover:text-white 
-            transition-all duration-300 ease-in-out hover:bg-secondary font-medium hover:shadow"
-            >
-              Learn About Our Care
-            </button>
+            </h1>
+
+            <p className="mt-6 text-base sm:text-lg text-gray-800 font-medium max-w-2xl">
+              Compassionate, personalized adult family home care designed to
+              support dignity, independence, comfort, and meaningful connection
+              every day. Experience a setting that prioritizes warmth over
+              clinical routine.
+            </p>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <button
+                className="
+                  bg-primary
+                  px-8
+                  py-3
+                  text-white
+                  rounded-2xl
+                  inline-flex
+                  items-center
+                  justify-center
+                  font-medium
+                  shadow-[0_4px_12px_rgba(37,48,107,0.15)]
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:shadow-[0_8px_20px_rgba(37,48,107,0.25)]
+                "
+              >
+                Schedule a Visit
+                <MdArrowForward className="ml-2 text-lg" />
+              </button>
+
+              <button
+                className="
+                  border-2
+                  border-secondary
+                  text-secondary
+                  px-8
+                  py-3
+                  rounded-2xl
+                  inline-flex
+                  items-center
+                  justify-center
+                  font-medium
+                  transition-all
+                  duration-300
+                  hover:bg-secondary
+                  hover:text-white
+                  hover:shadow-lg
+                "
+              >
+                Learn About Our Care
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="w-full z-20">
+      {/* Trust Section */}
+      <section className="relative z-20">
         <FamilyTrust />
-      </div>
+      </section>
 
-      <div className="w-full z-20">
+      {/* Expectations Section */}
+      <section className="relative z-20">
         <FamilyExpectation />
-      </div>
+      </section>
     </section>
   );
 };

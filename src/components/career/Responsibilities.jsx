@@ -1,14 +1,16 @@
 "use client";
+
 import { responsibilities } from "@/data/features";
 import { motion } from "framer-motion";
 import { MdCheckCircle } from "react-icons/md";
 
 export default function ResponsibilitiesSection() {
   return (
-    <section className="py-16 bg-surface-container-low">
-      <div className="max-w-4xl mx-auto px-6">
+    <section className="py-12 sm:py-16 bg-surface-container-low">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        {/* ================= TITLE ================= */}
         <motion.h2
-          className="text-3xl md:text-5xl font-display text-primary text-center font-semibold mb-4"
+          className="text-2xl sm:text-3xl md:text-5xl font-display text-primary text-center font-semibold mb-3 sm:mb-4"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -17,8 +19,9 @@ export default function ResponsibilitiesSection() {
           What You'll Do
         </motion.h2>
 
+        {/* ================= SUBTITLE ================= */}
         <motion.p
-          className="text-center text-on-surface-variant mb-12 font-body font-medium text-lg"
+          className="text-center text-sm sm:text-base md:text-lg text-on-surface-variant mb-8 sm:mb-10 md:mb-12 font-body font-medium leading-relaxed"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -28,8 +31,9 @@ export default function ResponsibilitiesSection() {
           companionship.
         </motion.p>
 
+        {/* ================= LIST ================= */}
         <motion.div
-          className="space-y-4"
+          className="space-y-3 sm:space-y-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-40px" }}
@@ -42,13 +46,16 @@ export default function ResponsibilitiesSection() {
           {responsibilities.map((item, index) => (
             <motion.div
               key={index}
-              className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm"
+              className="flex items-start sm:items-center gap-3 bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm"
               variants={{
                 hidden: { opacity: 0, x: -20 },
                 visible: {
                   opacity: 1,
                   x: 0,
-                  transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+                  transition: {
+                    duration: 0.4,
+                    ease: [0.22, 1, 0.36, 1],
+                  },
                 },
               }}
               whileHover={{
@@ -57,7 +64,9 @@ export default function ResponsibilitiesSection() {
                 transition: { type: "spring", stiffness: 300, damping: 20 },
               }}
             >
+              {/* ICON */}
               <motion.span
+                className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 mt-0.5 sm:mt-0"
                 initial={{ scale: 0, rotate: -30 }}
                 whileInView={{ scale: 1, rotate: 0 }}
                 viewport={{ once: true }}
@@ -68,9 +77,13 @@ export default function ResponsibilitiesSection() {
                   damping: 16,
                 }}
               >
-                <MdCheckCircle className="text-secondary-container font-body shrink-0" />
+                <MdCheckCircle className="text-secondary-container text-base sm:text-lg" />
               </motion.span>
-              <p className="text-on-surface-variant font-body">{item}</p>
+
+              {/* TEXT */}
+              <p className="text-sm sm:text-base text-on-surface-variant font-body leading-relaxed">
+                {item}
+              </p>
             </motion.div>
           ))}
         </motion.div>

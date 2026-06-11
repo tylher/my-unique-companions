@@ -8,7 +8,6 @@ const containerVariants = {
     transition: { staggerChildren: 0.12, delayChildren: 0.2 },
   },
 };
-
 const headingVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -17,7 +16,6 @@ const headingVariants = {
     transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
   },
 };
-
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.97 },
   visible: {
@@ -27,7 +25,6 @@ const cardVariants = {
     transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
 };
-
 const blobVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: {
@@ -39,17 +36,16 @@ const blobVariants = {
 
 const AboutServices = () => {
   return (
-    <section className="relative bg-[#f7f9fb]/50 py-24 overflow-hidden">
+    <section className="relative bg-[#f7f9fb]/50 py-16 md:py-24 overflow-hidden">
       {/* Glow blob */}
       <motion.div
-        className="absolute -top-40 -left-40 w-125 h-125 bg-primary-container rounded-full blur-3xl"
+        className="absolute -top-40 -left-40 w-48 h-48 md:w-125 md:h-125 bg-primary-container rounded-full blur-3xl"
         variants={blobVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       />
-
-      <div className="relative max-w-6xl mx-auto px-6">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <motion.div
           variants={headingVariants}
@@ -57,14 +53,13 @@ const AboutServices = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-display text-primary mb-12 font-semibold text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-primary mb-8 md:mb-12 font-semibold text-center">
             Full-Circle Support, Every Day.
           </h2>
         </motion.div>
-
         {/* Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

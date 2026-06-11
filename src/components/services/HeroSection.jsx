@@ -2,50 +2,43 @@ import { MdCircle } from "react-icons/md";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f7f9fb]  min-h-screen bg-[radial-gradient(circle_at_top_right,rgba(253,113,55,0.18),transparent_55%),radial-gradient(circle_at_bottom_left,rgba(13,25,85,0.18),transparent_55%)]">
-      {/* Background layer */}
-      {/* <div className="absolute inset-0 pointer-events-none"> */}
-      {/* Top-right glow */}
-      {/* <div className="absolute top-[-120px] right-[-120px] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(253,113,55,0.25)_0%,transparent_70%)]" /> */}
-
-      {/* Bottom-left glow */}
-      {/* <div className="absolute bottom-[-120px] left-[-120px] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(13,25,85,0.25)_0%,transparent_70%)]" /> */}
-      {/* </div> */}
-      <div className="container mx-auto px-6 pt-32 pb-16 w-full h-screen flex items-center">
-        <div className="mx-auto max-w-180 text-center flex flex-col gap-5">
-          <div className="flex items-center justify-center gap-3 text-secondary-container font-semibold">
-            <span className="tracking-[0.25em] font-script text-sm font-semibold text-secondary-container">
+    <section className="relative overflow-hidden bg-[#f7f9fb] min-h-[90vh] bg-[radial-gradient(circle_at_top_right,rgba(253,113,55,0.18),transparent_55%),radial-gradient(circle_at_bottom_left,rgba(13,25,85,0.18),transparent_55%)]">
+      <div className="container mx-auto px-4 sm:px-6 pt-16 sm:pt-32  sm:pb-16 w-full min-h-screen flex items-center">
+        <div className="mx-auto max-w-full sm:max-w-180 text-center flex flex-col gap-4 sm:gap-5">
+          {/* Eyebrow — wraps gracefully on mobile */}
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-secondary-container font-semibold">
+            <span className="tracking-[0.25em] font-script text-xs sm:text-sm font-semibold text-secondary-container">
               COMPASSIONATE
             </span>
-            <span>
+            <span className="hidden xs:inline">
               <MdCircle size={7} />
             </span>
-            <span className="tracking-[0.25em] font-script text-sm font-semibold text-secondary-container">
+            <span className="tracking-[0.25em] font-script text-xs sm:text-sm font-semibold text-secondary-container">
               PERSONALISED
             </span>
-            <span>
+            <span className="hidden xs:inline">
               <MdCircle size={7} />
             </span>
-            <span className="tracking-[0.25em] font-script text-sm font-semibold text-secondary-container">
+            <span className="tracking-[0.25em] font-script text-xs sm:text-sm font-semibold text-secondary-container">
               DIGNIFIED
             </span>
           </div>
 
-          <h1 className="font-display font-semibold text-5xl leading-tight text-primary md:text-6xl">
+          <h1 className="font-display font-semibold text-3xl sm:text-5xl md:text-6xl leading-tight text-primary">
             Every Service,
             <br />
             Designed Around You.
           </h1>
 
-          <p className=" font-body leading-relaxed text-on-surface-variant ">
+          <p className="font-body leading-relaxed text-on-surface-variant text-sm sm:text-base max-w-2xl mx-auto">
             At Unique Companions AFH, we provide compassionate, personalized
-            care designed to support each resident’s comfort, dignity, and
+            care designed to support each resident's comfort, dignity, and
             independence. Our services are tailored to meet individual needs
             while creating a warm, home like environment where residents feel
             safe, respected, and truly cared for.
           </p>
 
-          <div className=" flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {[
               "Personalized Care",
               "Family Communication",
@@ -53,7 +46,7 @@ const HeroSection = () => {
             ].map((item) => (
               <span
                 key={item}
-                className="rounded-full bg-primary-fixed px-5 py-3 text-sm font-medium text-primary-container"
+                className="rounded-full bg-primary-fixed px-4 sm:px-5 py-2 sm:py-3 text-xs sm:text-sm font-medium text-primary-container"
               >
                 {item}
               </span>
@@ -66,7 +59,7 @@ const HeroSection = () => {
       <svg
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="block w-full h-30"
+        className="block w-full h-16 sm:h-24 md:h-30"
       >
         <path
           fill="#ffffff"
