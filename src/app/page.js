@@ -1,3 +1,4 @@
+"use client"
 import FamilyExpectation from "@/components/home/FamilyExpectation";
 import FamilyTrust from "@/components/home/FamilyTrust";
 import Image from "next/image";
@@ -18,12 +19,31 @@ const HomePage = () => {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-gray-300/80 to-gray-700/5 z-10" />
+        <div
+          className="absolute z-10 "
+          style={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+            zIndex: 10,
+            // backgroundColor: "rgba(209, 213, 219, 0.5)", // fallback for no gradient
+
+            // Standard gradient (modern browsers)
+            backgroundImage:
+              "linear-gradient(to top right, rgba(209,213,219,0.6), rgba(55,65,81,0.05))",
+
+            // Legacy WebKit prefix (Safari 5-6, Chrome <26)
+            WebkitBackgroundImage:
+              "-webkit-linear-gradient(bottom left, rgba(209,213,219,0.8), rgba(55,65,81,0.05))",
+          }}
+        />
 
         {/* Content */}
         <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-0">
           <div className="max-w-4xl">
-            <h1 className="text-primary font-bold leading-tight text-4xl sm:text-5xl lg:text-6xl">
+            <h1 className="text-primary font-display font-bold leading-tight text-4xl sm:text-5xl lg:text-6xl">
               A Place That Feels Like Home.
               <br />
               <span className="text-primary/80">
@@ -31,7 +51,7 @@ const HomePage = () => {
               </span>
             </h1>
 
-            <p className="mt-6 text-base sm:text-lg text-gray-800 font-medium max-w-2xl">
+            <p className="mt-6 text-base font-body sm:text-lg text-gray-800 font-medium max-w-2xl">
               Compassionate, personalized adult family home care designed to
               support dignity, independence, comfort, and meaningful connection
               every day. Experience a setting that prioritizes warmth over
@@ -49,6 +69,7 @@ const HomePage = () => {
                   inline-flex
                   items-center
                   justify-center
+                  font-body
                   font-medium
                   shadow-[0_4px_12px_rgba(37,48,107,0.15)]
                   transition-all
@@ -75,6 +96,7 @@ const HomePage = () => {
                   font-medium
                   transition-all
                   duration-300
+                  font-body
                   hover:bg-secondary
                   hover:text-white
                   hover:shadow-lg

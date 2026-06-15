@@ -1,0 +1,93 @@
+/* legacy-blobs.module.css */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -10;
+}
+.blob1 {
+  top: -10%;
+  left: -5%;
+  width: 40%;
+  height: 40%;
+  background-color: rgba(255, 128, 82, 0.6);
+  animation: float 8s infinite ease-in-out;
+}
+.blob2 {
+  bottom: -10%;
+  right: -5%;
+  width: 30%;
+  height: 30%;
+  background-color: rgba(0, 100, 200, 0.4);
+  animation: float-delayed 8s infinite ease-in-out;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes float-delayed {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+/* WebKit prefix for older Safari */
+@-webkit-keyframes float {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes float-delayed {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+.legacy-glow {
+  width: 16rem;
+  height: 16rem;
+
+  background: radial-gradient(
+    circle,
+    rgba(227, 94, 37, 0.5) 0%,
+    rgba(227, 94, 37, 0.3) 30%,
+    rgba(227, 94, 37, 0.1) 55%,
+    rgba(227, 94, 37, 0.02) 75%
+  );
+
+  border-radius: 9999px;
+}
+
+@media (min-width: 640px) {
+  .legacy-glow {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .legacy-glow {
+    width: 37.5rem;
+    height: 37.5rem;
+  }
+}

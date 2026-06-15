@@ -1,10 +1,13 @@
+import style from "@/components/legacy.module.css";
 import { motion } from "framer-motion";
 
 const Mission = () => {
   return (
     <section className="relative bg-primary-container py-16 md:py-24 overflow-hidden">
-      <div className="absolute inset-0 flex justify-center">
-        <div className="w-64 h-64 sm:w-96 sm:h-96 md:w-150 md:h-150 bg-[#e35e25] opacity-10 blur-[180px]" />
+      <div className="absolute left-0 top-0 right-0 flex justify-center">
+        <div
+          className={`w-64 h-64 sm:w-96 sm:h-96 md:w-150 md:h-150 bg-[#e35e25] opacity-40 backdrop-blur-2xl ${style["legacy-glow"]} `}
+        />
       </div>
       <motion.div
         className="relative max-w-4xl mx-auto text-center px-4 sm:px-6"
