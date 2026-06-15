@@ -5,22 +5,71 @@
   pointer-events: none;
   z-index: -10;
 }
-.blob1 {
-  top: -10%;
-  left: -5%;
-  width: 40%;
-  height: 40%;
-  background-color: rgba(255, 128, 82, 0.6);
-  animation: float 8s infinite ease-in-out;
-}
+
+.blob1,
 .blob2 {
-  bottom: -10%;
-  right: -5%;
-  width: 30%;
-  height: 30%;
-  background-color: rgba(0, 100, 200, 0.4);
-  animation: float-delayed 8s infinite ease-in-out;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
 }
+
+@supports (filter: blur(1px)) {
+  .blob1 {
+    top: -10%;
+    left: -5%;
+    width: 40%;
+    height: 40%;
+
+    background-color: rgba(255, 128, 82, 0.6);
+    filter: blur(100px);
+
+    animation: float 8s infinite ease-in-out;
+  }
+
+  .blob2 {
+    bottom: -10%;
+    right: -5%;
+    width: 30%;
+    height: 30%;
+
+    background-color: rgba(0, 100, 200, 0.4);
+    filter: blur(80px);
+
+    animation: float-delayed 8s infinite ease-in-out;
+  }
+}
+
+@supports not (filter: blur(1px)) {
+  .blob1 {
+    top: -10%;
+    left: -5%;
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 128, 82, 0.6) 0%,
+      rgba(255, 128, 82, 0.2) 40%,
+      rgba(255, 128, 82, 0) 70%
+    );
+    animation: float 8s infinite ease-in-out;
+  }
+
+  .blob2 {
+    bottom: -10%;
+    right: -5%;
+    width: 30%;
+    height: 30%;
+    background: radial-gradient(
+      circle,
+      rgba(0, 100, 200, 0.4) 0%,
+      rgba(0, 100, 200, 0.15) 40%,
+      rgba(0, 100, 200, 0) 70%
+    );
+    animation: float-delayed 8s infinite ease-in-out;
+  }
+}
+
 @keyframes float {
   0%,
   100% {

@@ -13,7 +13,7 @@ const AboutPage = () => {
     <div>
       <section className="px-4 pt-32 sm:px-6 pb-32 justify-center md:px-16 flex items-center gap-10 md:gap-16 flex-col md:flex-row md:justify-start relative min-h-screen bg-surface/40 w-full overflow-hidden">
         <div
-          className={`absolute top-[-10%] left-[-5%] w-[40vw] h-[40vw] rounded-full  blur-[100px] -z-10 pointer-events-none animate-float ${style.blob} ${style.blob1}`}
+          className={`absolute top-[-10%] left-[-5%] w-[40vw] h-[40vw] rounded-full blur-[100px]  -z-10 pointer-events-none animate-float ${style.blob} ${style.blob1}`}
         />
         <div
           className={`absolute bottom-[-10%] right-[-5%] w-[30vw] h-[30vw] rounded-full bg-primary-fixed-dim/40 blur-[80px] -z-10 pointer-events-none animate-float-delayed ${style.blob} ${style.blob2}`}
