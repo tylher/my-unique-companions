@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import FamilyExpectation from "@/components/home/FamilyExpectation";
 import FamilyTrust from "@/components/home/FamilyTrust";
 import Image from "next/image";
@@ -8,19 +8,19 @@ const HomePage = () => {
   return (
     <section>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center ">
         {/* Background Image */}
         <Image
           src="/images/homeBg.jpg"
           alt="Home Background"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_20%]"
         />
 
         {/* Overlay */}
         <div
-          className="absolute z-10 "
+          className="absolute z-10 inset-0"
           style={{
             position: "absolute",
             top: 0,
@@ -32,11 +32,11 @@ const HomePage = () => {
 
             // Standard gradient (modern browsers)
             backgroundImage:
-              "linear-gradient(to top right, rgba(209,213,219,0.6), rgba(55,65,81,0.05))",
+              "linear-gradient(to top right, rgba(209,220,255,0.7), rgba(55,65,81,0.1))",
 
             // Legacy WebKit prefix (Safari 5-6, Chrome <26)
-            WebkitBackgroundImage:
-              "-webkit-linear-gradient(bottom left, rgba(209,213,219,0.8), rgba(55,65,81,0.05))",
+            // WebkitBackgroundImage:
+            //   "-webkit-linear-gradient(bottom left, rgba(209,213,219,0.8), rgba(55,65,81,0.05))",
           }}
         />
 
