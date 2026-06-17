@@ -1,6 +1,10 @@
 "use client";
+import ClosingCTASection from "@/components/home/ClosingCTASection";
 import FamilyExpectation from "@/components/home/FamilyExpectation";
 import FamilyTrust from "@/components/home/FamilyTrust";
+import HomeGallerySection from "@/components/home/HomeGallerySection";
+import MemoryCareSection from "@/components/home/MemoryCareSection";
+import PromiseSection from "@/components/home/PromiseSection";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
@@ -121,6 +125,14 @@ const HomePage = () => {
       <section className="relative z-20">
         <FamilyExpectation />
       </section>
+
+      <HomeGallerySection />
+
+      <PromiseSection />
+
+      <MemoryCareSection />
+
+      <ClosingCTASection />
     </section>
   );
 };

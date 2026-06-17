@@ -1,11 +1,13 @@
+import { quickLinks } from "@/data/features";
 import Image from "next/image";
+import Link from "next/link";
 import { IoIosHeart } from "react-icons/io";
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 
 const Footer = () => {
   return (
     <footer className="bg-primary-fixed/70 text-primary border-t border-surface-container-low px-6 sm:px-10 lg:px-20 pt-12">
-      <div className="flex flex-col lg:flex-row gap-10 lg:gap-24  mb-10 ">
+      <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 justify-between  mb-10 ">
         {/* Logo + Tagline */}
         <div className="w-full lg:w-fit flex flex-col gap-1 justify-center items-center">
           <div className="relative w-fit">
@@ -32,13 +34,30 @@ const Footer = () => {
           </div>
         </div>
 
+        <div>
+          <h4 className="font-semibold font-display text-lg sm:text-xl tracking-wider mb-3">
+            Quick Links
+          </h4>
+
+          <ul className="flex flex-col gap-2 font-body">
+            {quickLinks.map((link, i) => (
+              <li
+                key={i}
+                className="text-[14px] opacity-80 text-inverse-surface hover:opacity-100 hover:text-primary transition-all font-ui"
+              >
+                <Link href={link.href}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* Contact Section */}
         <div className="w-full lg:w-auto">
-          <h2 className="font-display font-semibold text-lg sm:text-xl text-primary mb-1">
+          <h2 className="font-display font-semibold text-lg sm:text-xl text-primary mb-3">
             Contact
           </h2>
 
-          <p className="text-on-surface  font-body">
+          <p className="text-on-surface text-sm font-body">
             Reach out to us anytime, we’re here to help you and your loved ones.
           </p>
 
@@ -78,12 +97,17 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <p className="flex items-center gap-2  font-body">
+            <Link
+              className="flex items-center gap-2  font-body"
+              href={"https://maps.app.goo.gl/qnKaWvPnSoRar22u9"}
+              target="_blank"
+              rel="noopner noreferrer"
+            >
               <span className="text-secondary ">
                 <MdLocationOn />{" "}
               </span>{" "}
-              Washington State
-            </p>
+              710 ROE STREET, STEILACOOM, 98388
+            </Link>
           </div>
         </div>
       </div>

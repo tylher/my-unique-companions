@@ -3,7 +3,7 @@ import FamilyTrustFeatureCard from "./FamilyTrustFeatureCard";
 
 const FamilyTrust = () => {
   return (
-    <section className="bg-surface-container py-20 lg:py-32">
+    <section className="bg-surface-container py-10 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-14">
           {/* Header */}

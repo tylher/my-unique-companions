@@ -716,3 +716,77 @@ export const contactDetails = [
     ],
   },
 ];
+
+export const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Careers", href: "/careers" },
+  { label: "Resources", href: "/resources" },
+];
+
+export const homeGallery = {
+  eyebrow: "TAKE A LOOK INSIDE",
+  title: "A Home You'll Love",
+
+  buttonText: "See More",
+
+  images: [
+    {
+      id: 1,
+      alt: "Warm interior living room",
+      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDgtAnKKkbXKIWFfoQAAjwlgnAdsvOEevjzM9poU7wSAOwcjdguyr8P6F70obrXXjW8uSsyBpQfQsUxctf1eayS87VS63-r0Z9sk-5WGce0HOPQYd_A1Sc9dxNmSaDadxV-6p0ppSmD371JVLDS_cjclyxoBypU_oEgE_JWi5vPfT2_dSGlUQT-wOimkjvA5jKOiVK7_mkTBvCTF694CdQJoGImtOHTqCY8dlTrn-ujhUZxT-MI7uMNV-i70u7qw0T9Ta6l1QcnyTog",
+    },
+    {
+      id: 2,
+      alt: "Cozy bedroom",
+      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBMtVY5D9zJ4RGSQPBpNk22rv4yUkhKdm33dPGdRrDiTmpOvtgwPQB3qnFC-QhleJeR3laihZGX4nZ_zA_-qeiCr5umkOgKi2OSmHAja-wyMJCgcEBNWHY6tOs4xlpr8m5e54ZwmMJu59gY6nPweMuZi8oVU0nPW2WWcOkzeYbE_YHA8EaVQzgU4KHeGkigkWHlwIQu58co_njSjXyB-9MD5CvHCMIpzmQlfYpZCd6Oivn6KUxhEN7vqjck8dbDfHg52JLh4Jq6yV9a",
+    },
+    {
+      id: 3,
+      alt: "Bright dining area",
+      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDyB5Qb3MHbQ22oLi1Fdl5CHXoGYbyLK3lNwdPbDdGKVxfOlasZxjcvkCJDyEQM2K-UQ2tmu4HCC2GEJE4O0ilkH8fH-G36OJYOAqviArGbb_vv99YUG0bxSRkvYc1ep7_AmD-1e5aUUxrEERh-Gyrb2xm6ZJqXUlaQwf_BS2djW3I77bLpkYMwXCf9F47EKJAsl71-_PjwOu055qlDCxXumwXxTDWRONGaT3uQIZ8gSJMK2YhjN9MkELFd-5d3gsI0QNJ16mfKQUgJ",
+    },
+    {
+      id: 4,
+      alt: "Garden patio",
+      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCBJrdRLwQRwd5dphv-CsfEVCyLF8ZyDpu7MOkMgsvo1iNCm1CWUuM_lMwhj2Oor4giTI0hhQcjo28Su2EzclotixXQGhILGXZj4sRqa-tJ0GQrOSdDN27Bxhyhr7qNR6U9nW1gBK5CKh19mAbGFmabrQgFYsxveUTRBWqHg81p3AWYTM3RXk7XrnP0bS0Of2_JkTvQQVl8Chg4jZGNBzDN4qWXUwoJnYHby-ywVcSNqYLCgh4yKCLLgZrJaQnJc5SD6BCnsaCLw78Z",
+      overlayText: "+12 More Photos",
+    },
+  ],
+};
+
+export const promiseData = {
+  eyebrow: "OUR PROMISE",
+
+  quote:
+    "To provide compassionate, personalized care in a warm and supportive environment where every resident feels safe, respected, and at home.",
+
+  description:
+    "We believe that exceptional care goes beyond physical needs. It's about creating meaningful connections, nurturing joy, and honoring the unique life story of every individual we serve.",
+};
+
+export const memoryCareData = {
+  eyebrow: "SPECIALIST CARE",
+
+  title: "Compassionate Memory Care & Developmental Support",
+
+  description:
+    "Our specialized programs are thoughtfully designed to support individuals with memory loss and developmental challenges, focusing on dignity, engagement, and emotional well-being.",
+
+  tags: [
+    "Structured Routines",
+    "Gentle Redirection",
+    "Calm, Predictable Environment",
+  ],
+
+  buttonText: "Learn About Memory Care",
+};
+
+export const closingCTAData = {
+  title: "We care for each person as we would our own family.",
+
+  values: ["Compassion", "Trust", "Respect", "Connection", "Dignity"],
+
+  buttonText: "Schedule a Visit",
+};
