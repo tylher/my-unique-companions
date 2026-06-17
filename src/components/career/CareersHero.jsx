@@ -51,23 +51,25 @@ export default function CareersHero() {
               className="mt-5 flex flex-col sm:flex-row gap-3 sm:gap-4"
               {...fadeUp(0.42)}
             >
-              <motion.button
+              <motion.a
                 className="rounded-lg bg-white text-sm font-body px-6 sm:px-8 py-2.5 sm:py-2 font-medium text-primary shadow-[0_10px_30px_rgba(253,113,55,0.35)] w-full sm:w-auto"
                 whileHover={{ y: -3, scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 350, damping: 18 }}
+                href="#apply"
               >
                 Apply Now
-              </motion.button>
+              </motion.a>
 
-              <motion.button
+              <motion.a
                 className="rounded-lg border-2 text-sm font-body border-secondary hover:bg-secondary px-6 sm:px-8 py-2.5 sm:py-2 text-white backdrop-blur w-full sm:w-auto"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 350, damping: 18 }}
+                href="#more"
               >
                 Learn More
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Culture strip */}

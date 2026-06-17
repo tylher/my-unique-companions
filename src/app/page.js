@@ -2,6 +2,7 @@
 import FamilyExpectation from "@/components/home/FamilyExpectation";
 import FamilyTrust from "@/components/home/FamilyTrust";
 import Image from "next/image";
+import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 
 const HomePage = () => {
@@ -59,7 +60,7 @@ const HomePage = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button
+              <Link
                 className="
                   bg-primary
                   px-8
@@ -77,12 +78,13 @@ const HomePage = () => {
                   hover:-translate-y-1
                   hover:shadow-[0_8px_20px_rgba(37,48,107,0.25)]
                 "
+                href="/contact"
               >
                 Schedule a Visit
                 <MdArrowForward className="ml-2 text-lg" />
-              </button>
+              </Link>
 
-              <button
+              <Link
                 className="
                   border-2
                   border-secondary
@@ -101,9 +103,10 @@ const HomePage = () => {
                   hover:text-white
                   hover:shadow-lg
                 "
+                href={"/about"}
               >
                 Learn About Our Care
-              </button>
+              </Link>
             </div>
           </div>
         </div>

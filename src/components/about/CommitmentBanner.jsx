@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const CommitmentBanner = () => {
   return (
     <section className="relative bg-primary/90 py-12 md:py-16 overflow-hidden">
@@ -17,7 +19,7 @@ const CommitmentBanner = () => {
           <span className="w-2 h-2 rounded-full bg-[#e35e25]" />
           <span>Dignity</span>
         </div>
-        <button
+        <Link
           className="
             bg-[#e35e25]
             text-white
@@ -31,9 +33,9 @@ const CommitmentBanner = () => {
             hover:shadow-xl
             w-full sm:w-auto
           "
-        >
+        href={"/contact"}>
           Get in Touch
-        </button>
+        </Link>
       </div>
     </section>
   );

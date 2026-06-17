@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CTABanner() {
   return (
     <section className="bg-surface-container-low py-10 md:py-16">
@@ -12,12 +14,12 @@ export default function CTABanner() {
             best path forward.
           </p>
           <div className="mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-5">
-            <button className="w-full sm:w-auto px-5 py-3 rounded-xl bg-primary-container text-white font-medium hover:bg-primary-container/90 text-sm sm:text-base">
+            <Link className="w-full sm:w-auto px-5 py-3 rounded-xl bg-primary-container text-white font-medium hover:bg-primary-container/90 text-sm sm:text-base" href={"/contact"}>
               Schedule a Conversation
-            </button>
-            <button className="w-full sm:w-auto px-5 py-3 rounded-xl border-2 border-secondary-container text-secondary-container hover:font-medium hover:bg-secondary-container hover:text-white text-sm sm:text-base">
+            </Link>
+            <Link className="w-full sm:w-auto px-5 py-3 rounded-xl border-2 border-secondary-container text-secondary-container hover:font-medium hover:bg-secondary-container hover:text-white text-sm sm:text-base" href={"/about"}>
               Learn About Our Home
-            </button>
+            </Link>
           </div>
           <div className="mt-8 md:mt-10 flex flex-wrap justify-center gap-2 sm:gap-3">
             {[

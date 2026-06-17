@@ -145,15 +145,16 @@ export default function ApplicationSection() {
               Apply Now
             </motion.button>
 
-            <motion.button
+            <motion.a
               type="button"
               className="rounded-lg border border-secondary-container px-6 py-4 font-medium text-secondary-container hover:bg-secondary-container hover:text-white w-full sm:w-50 flex items-center justify-center text-sm sm:text-base"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
               transition={{ type: "spring", stiffness: 380, damping: 18 }}
+              href="mailto:info@uniquecompanions.com"
             >
               Contact Us Directly
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>

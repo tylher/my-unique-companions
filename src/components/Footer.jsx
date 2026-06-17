@@ -38,12 +38,12 @@ const Footer = () => {
             Contact
           </h2>
 
-          <p className="text-on-surface text-sm font-body">
+          <p className="text-on-surface  font-body">
             Reach out to us anytime, we’re here to help you and your loved ones.
           </p>
 
-          <div className="mt-2 text-sm text-on-surface space-y-1">
-            <div className="flex items-center gap-2  font-body">
+          <div className="mt-3 text-sm text-on-surface space-y-1 font-medium flex flex-col gap-2">
+            <div className="flex items-center gap-2  font-body ">
               <span className="text-secondary ">
                 <MdEmail />{" "}
               </span>

@@ -10,12 +10,17 @@ const CareerPage = () => {
   return (
     <div className="mt-30">
       <CareersHero />
-      <WhyWorkHere />
+      <div id="more">
+        <WhyWorkHere />
+      </div>
+
       <TypicalShift />
       <ResponsibilitiesSection />
       <QualificationsSection />
       <BenefitsSection />
-      <ApplicationSection />
+      <div id="apply">
+        <ApplicationSection />
+      </div>
     </div>
   );
 };
