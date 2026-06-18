@@ -112,12 +112,15 @@ export default function GalleryPage() {
     setActiveIndex(index);
   };
 
+  const message =
+    "Hi there, I would like to schedule a visit to Unique companions AFQ";
+
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section
         ref={heroRef}
-        className="relative w-full h-153.5 md:h-217.5 flex items-center justify-center overflow-hidden"
+        className="relative w-full h-153.5 md:h-screen flex items-center justify-center overflow-hidden"
       >
         {/* Parallax image */}
         <motion.div
@@ -155,7 +158,11 @@ export default function GalleryPage() {
             className="font-display md:font-display text-xl md:text-6xl font-bold text-on-primary mb-6 drop-shadow-lg"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.75,
+              delay: 0.3,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             Experience Our Home
           </motion.h1>
@@ -164,7 +171,11 @@ export default function GalleryPage() {
             className="font-body text-lg text-on-primary/90 max-w-2xl mx-auto drop-shadow-md"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.7,
+              delay: 0.45,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             A visual journey through our thoughtfully designed spaces, crafted
             for dignity, comfort, and community connection.
@@ -177,11 +188,17 @@ export default function GalleryPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.6 }}
           >
-            <span className="text-[11px] tracking-widest uppercase font-medium">Scroll to explore</span>
+            <span className="text-[11px] tracking-widest uppercase font-medium">
+              Scroll to explore
+            </span>
             <motion.div
               className="w-px h-8 bg-on-primary/30 origin-top"
               animate={{ scaleY: [0, 1, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              transition={{
+                repeat: Infinity,
+                duration: 1.5,
+                ease: "easeInOut",
+              }}
             />
           </motion.div>
         </motion.div>
@@ -208,7 +225,11 @@ export default function GalleryPage() {
               variants={filterPill}
               onClick={() => setActiveCategory(cat.id)}
               className="relative font-script font-medium text-base pb-2 whitespace-nowrap transition-colors duration-200 flex items-center gap-1.5"
-              style={{ color: isActive ? "var(--color-primary)" : "var(--color-on-surface-variant)" }}
+              style={{
+                color: isActive
+                  ? "var(--color-primary)"
+                  : "var(--color-on-surface-variant)",
+              }}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -330,7 +351,12 @@ export default function GalleryPage() {
           <motion.div
             className="absolute bottom-0 left-0 w-64 h-64 bg-primary-container/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/3 pointer-events-none"
             animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.9, 0.5] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
           />
 
           <div className="relative z-10 max-w-2xl mx-auto">
@@ -352,22 +378,34 @@ export default function GalleryPage() {
               className="flex flex-col sm:flex-row justify-center gap-4"
               variants={fadeUp}
             >
-              <motion.button
+              <motion.a
                 className="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-lg text-label-lg shadow-md"
-                whileHover={{ scale: 1.04, y: -2, boxShadow: "0 12px 28px rgba(37,48,107,0.25)" }}
+                whileHover={{
+                  scale: 1.04,
+                  y: -2,
+                  boxShadow: "0 12px 28px rgba(37,48,107,0.25)",
+                }}
                 whileTap={{ scale: 0.96 }}
                 transition={{ duration: 0.2 }}
+                href={`https://wa.me/12533044293?text=${encodeURIComponent(message)}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Schedule a Private Tour
-              </motion.button>
-              <motion.button
+                Schedule a visit
+              </motion.a>
+              <motion.a
                 className="bg-transparent border-2 border-secondary text-secondary px-8 py-4 rounded-xl font-label-lg text-label-lg"
-                whileHover={{ scale: 1.04, y: -2, backgroundColor: "rgba(var(--color-secondary-rgb), 0.05)" }}
+                whileHover={{
+                  scale: 1.04,
+                  y: -2,
+                  backgroundColor: "rgba(var(--color-secondary-rgb), 0.05)",
+                }}
                 whileTap={{ scale: 0.96 }}
                 transition={{ duration: 0.2 }}
+                href="/contact"
               >
                 Contact Our Care Team
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
         </div>

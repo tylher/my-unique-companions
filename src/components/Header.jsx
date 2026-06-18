@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 
@@ -18,9 +19,12 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const message =
+    "Hi there, I would like to schedule a visit to Unique companions AFQ";
+
   return (
     <header
-      className={`w-full max-w-screen overflow-hidden px-4 md:px-6 lg:px-8 py-4 transition-all duration-300 ${
+      className={`w-full max-w-screen  px-4 md:px-6 lg:px-8 py-4 transition-all duration-300 ${
         scrolled
           ? "fixed top-0 left-0 bg-white shadow-2xl z-50"
           : "absolute top-0 left-0 bg-transparent z-50"
@@ -41,9 +45,14 @@ const Header = () => {
         </div>
 
         {/* Desktop Button */}
-        <button className="hidden lg:block text-white font-bold bg-primary py-2 px-4 rounded-2xl">
+        <Link
+          className="hidden lg:block text-white font-bold bg-primary py-2 px-4 rounded-2xl"
+          href={`https://wa.me/12533044293?text=${encodeURIComponent(message)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Schedule a visit
-        </button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -62,9 +71,14 @@ const Header = () => {
         <div className="lg:hidden mt-4 rounded-2xl bg-white shadow-xl p-5">
           <NavBar isOpen={menuOpen} />
 
-          <button className="w-full mt-5 text-white font-bold bg-primary py-3 rounded-xl">
+          <Link
+            className="hidden lg:block text-white font-bold bg-primary py-2 px-4 rounded-2xl"
+            href={`https://wa.me/12533044293?text=${encodeURIComponent(message)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Schedule a visit
-          </button>
+          </Link>
         </div>
       )}
     </header>
