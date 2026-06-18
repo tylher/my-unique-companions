@@ -790,3 +790,173 @@ export const closingCTAData = {
 
   buttonText: "Schedule a Visit",
 };
+
+// data/gallery.js
+
+export const categories = [
+  { id: "all", label: "All Spaces" },
+  { id: "living", label: "Living Areas" },
+  { id: "suites", label: "Private Suites" },
+  { id: "gardens", label: "Gardens" },
+  { id: "dining", label: "Dining" },
+];
+
+// `size` controls the grid treatment on the page:
+// "wide"   -> full-width cinematic block (aspect-[21/9] on desktop)
+// "large"  -> large asymmetric block (md:col-span-8)
+// "small"  -> stacked small block (md:col-span-4, paired two-up)
+export const galleryImages = [
+  {
+    id: 1,
+    category: "gardens",
+    size: "wide",
+    badge: "Tranquil Gardens",
+    title: "The Sensory Pathway",
+    alt: "An ultra-wide, cinematic view of a beautifully landscaped outdoor garden path at a premium elder care residence. Lush green foliage surrounds a smooth, accessible walkway under dappled sunlight.",
+    src: "/images/gallery/pic2.jpg",
+  },
+  {
+    id: 2,
+    category: "dining",
+    size: "large",
+    title: "Communal Dining",
+    alt: "A bright, modern chef's kitchen and communal dining area in a luxury adult family home, with pristine white countertops, soft blue cabinetry, and warm wood accents.",
+    src: "/images/gallery/pic4.jpg",
+  },
+  {
+    id: 3,
+    category: "living",
+    size: "small",
+    alt: "A close-up, high-quality shot of a comfortable, premium reading nook bathed in warm afternoon sunlight, with a plush armchair and a wooden side table holding a ceramic teacup.",
+    src: "/images/gallery/pic3.jpg",
+  },
+  {
+    id: 4,
+    category: "suites",
+    size: "small",
+    alt: "Detail shot of a beautifully appointed private bedroom suite in a luxury care facility, with crisp white linens, a soft blue throw blanket, and warm bedside lighting.",
+    src: "/images/gallery/pic1.jpg",
+  },
+  {
+    id: 5,
+    category: "living",
+    size: "wide",
+    badge: "Wellness Spaces",
+    title: "The Activity Lounge",
+    alt: "A spacious, meticulously designed wellness and activity center within a premium elder care home, with large windows, polished hardwood floors, and comfortable seating arranged for group activities.",
+    src: "/images/gallery/pic5.jpg",
+  },
+  {
+    id: 6,
+    category: "suites",
+    size: "large",
+    title: "Private Bedroom Suite",
+    alt: "A full view of a spacious private bedroom suite with hotel-quality furnishings, a large window with soft natural light, and a cozy seating area.",
+    src: "/images/gallery/pic8.jpg",
+  },
+  {
+    id: 7,
+    category: "living",
+    size: "small",
+    alt: "A warm, sunlit corner of the main living room featuring soft neutral-toned sofas and a coffee table with fresh flowers.",
+    src: "/images/gallery/pic7.jpg",
+  },
+  {
+    id: 8,
+    category: "gardens",
+    size: "small",
+    alt: "A peaceful seating area in the garden courtyard, surrounded by flowering plants, designed for quiet conversation and reflection.",
+    src: "/images/gallery/pic6.jpg",
+  },
+  {
+    id: 9,
+    category: "dining",
+    size: "wide",
+    badge: "Family-Style Dining",
+    title: "The Gathering Table",
+    alt: "A long, elegant dining table set for a family-style meal, surrounded by comfortable chairs, with warm pendant lighting overhead.",
+    src: "/images/gallery/pic11.jpg",
+  },
+  {
+    id: 10,
+    category: "suites",
+    size: "small",
+    alt: "A bright private suite bathroom with grab bars discreetly integrated into elegant tilework, balancing safety and luxury.",
+    src: "/images/gallery/pic12.jpg",
+  },
+  {
+    id: 11,
+    category: "living",
+    size: "small",
+    alt: "A cozy fireside seating nook with two armchairs facing a warm fireplace, ideal for one-on-one companionship.",
+    src: "/images/gallery/pic9.jpg",
+  },
+  {
+    id: 12,
+    category: "gardens",
+    size: "large",
+    title: "Raised Garden Beds",
+    alt: "Accessible raised garden beds in a courtyard, allowing residents to participate in light gardening activities at a comfortable height.",
+    src: "/images/gallery/pic13.jpg",
+  },
+  {
+    id: 13,
+    category: "living",
+    size: "small",
+    alt: "A living space",
+    src: "/images/gallery/pic14.jpg",
+  },
+  {
+    id: 14,
+    category: "living",
+    size: "wide",
+    badge: "Shared Spaces",
+    title: "The Sunroom",
+    alt: "A glass-walled sunroom filled with plants and comfortable wicker furniture, offering a bright space for residents to relax during the day.",
+    src: "/images/gallery/pic15.jpg",
+  },
+  {
+    id: 15,
+    category: "suites",
+    size: "small",
+    alt: "A thoughtfully decorated private suite with personal mementos and photographs displayed on a dresser, reflecting individual personality.",
+    src: "/images/gallery/pic16.jpg",
+  },
+  {
+    id: 16,
+    category: "gardens",
+    size: "small",
+    alt: "A covered porch area overlooking the garden, furnished with rocking chairs for residents to enjoy the outdoors comfortably.",
+    src: "/images/gallery/pic17.jpg",
+  },
+  {
+    id: 17,
+    category: "suites",
+    size: "large",
+    title: "Luxury bathroom",
+    alt: "A clean and safe bathroom",
+    src: "/images/gallery/pic18.jpg",
+  },
+  {
+    id: 18,
+    category: "suites",
+    size: "small",
+    alt: "A thoughtfully decorated private suite with personal mementos and photographs displayed on a dresser, reflecting individual personality.",
+    src: "/images/gallery/pic19.jpg",
+  },
+  {
+    id: 19,
+    category: "living",
+    size: "small",
+    alt: "A living room to rest comfortably.",
+    src: "/images/gallery/pic20.jpg",
+  },
+  {
+    id: 20,
+    category: "suites",
+    size: "wide",
+    title: "Accessible Restroom",
+    alt: "A clean and safe bathroom",
+    src: "/images/gallery/pic21.jpg",
+  },
+];
