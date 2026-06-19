@@ -393,7 +393,8 @@ export const detailedServices = [
       "Monitoring for changes in condition",
     ],
     badges: ["WA State Compliant", "Family Notified", "Pharmacy Coordinated"],
-    quote: "Consistent, safe, and always communicated clearly.",
+    quote:
+      "We maintain clear communication with families and medical professionals to keep care consistent and reliable.",
     chip: "Safe & Reliable",
     image: "/images/medical-partnership.jpg",
   },
@@ -407,11 +408,12 @@ export const detailedServices = [
       "We prepare fresh, balanced meals tailored to dietary needs and personal preferences in a warm, family-style environment.",
     bullets: [
       "Home-cooked meals and snacks",
-      "Special diets (diabetic, low-sodium, soft foods)",
+      "Special diets (low sodium, diabetic friendly, soft foods, etc.)",
       "Hydration monitoring",
-      "Cultural and personal preferences",
+      "Cultural and personal food preferences",
     ],
-    quote: "Meals served family-style — because food is connection.",
+    quote:
+      "Meals are served in a warm, family style setting that encourages connection and comfort.",
     chip: "Home-Cooked Daily",
     image: "/images/home-cooked.jpg",
   },
@@ -438,18 +440,19 @@ export const detailedServices = [
     id: "memory-care",
     type: "A",
     icon: FaBrain,
-    title: "Specialized Memory Care & Developmental Support",
+    title:
+      "Specialized Memory Care (Dementia, Alzheimer's) and Developmental Disabilities ",
     description:
-      "We support residents living with dementia, Alzheimer’s, and developmental disabilities in a calm, structured and compassionate environment.",
+      "We offer compassionate support for residents living with dementia, Alzheimer’s, and developmental disabilities.",
     bullets: [
-      "Structured routines for stability",
-      "Gentle redirection techniques",
-      "Memory-support activities",
-      "Calm predictable environment",
-      "Specialized caregiver training",
+      "Structured routines for comfort and stability",
+      "Gentle redirection and de escalation techniques",
+      "Activities that support memory and engagement",
+      "A calm, predictable environment",
+      "Caregiver training in dementia specific best practices",
     ],
     quote:
-      "Our goal is to help every resident feel safe, understood, and at peace.",
+      "Our goal is to help residents feel safe, understood, and emotionally supported",
     chip: "Specialized Care",
     image: "/images/memory.jpg",
   },
@@ -465,7 +468,7 @@ export const detailedServices = [
       "Condition monitoring",
       "Fall prevention practices",
       "Appointment coordination",
-      "Provider communication",
+      "Communication with nurses, therapists, and physicians",
       "Care transition support",
     ],
     quote:
@@ -485,10 +488,11 @@ export const detailedServices = [
       "One-on-one companionship",
       "Light hobbies and activities",
       "Social interaction and conversation",
-      "Celebrations and events",
+      "Celebrations, holidays, and special moments",
       "Encouraged participation in routines",
     ],
-    quote: "Emotional well-being is just as important as physical care.",
+    quote:
+      "We create a warm, family like atmosphere where residents feel connected and valued.",
     chip: "Community & Companionship",
     image: "/images/recreation1.jpg",
   },
@@ -504,7 +508,7 @@ export const detailedServices = [
       "Peaceful home atmosphere",
       "Private or semi-private rooms",
       "Safe indoor/outdoor spaces",
-      "Family-oriented community",
+      "A supportive, family oriented community",
     ],
     quote:
       "Everything we do is centered on comfort, dignity, and quality of life.",
@@ -514,32 +518,33 @@ export const detailedServices = [
 ];
 
 export const memoryCareItems = [
-  {
+   {
     icon: FaBrain,
     title: "Structured Routines",
-    text: "Predictable daily schedules help residents feel secure.",
-  },
-  {
-    icon: FaShieldAlt,
-    title: "Safe Environment",
-    text: "Designed to reduce confusion and support independence.",
+    text: "Consistent daily schedules provide comfort, familiarity, and stability.",
   },
   {
     icon: FaHandHoldingHeart,
-    title: "Compassionate Support",
-    text: "Patience, dignity and understanding guide every interaction.",
-  },
-  {
-    icon: FaUsers,
-    title: "Family Partnership",
-    text: "Families remain involved throughout the care journey.",
+    title: "Gentle Redirection",
+    text: "Compassionate de-escalation techniques help reduce anxiety and confusion.",
   },
   {
     icon: FaClipboardList,
-    title: "Individualized Plans",
-    text: "Care strategies tailored to each resident's needs.",
+    title: "Meaningful Activities",
+    text: "Engaging programs support memory, cognitive stimulation, and social connection.",
+  },
+  {
+    icon: FaShieldAlt,
+    title: "Calm Environment",
+    text: "A peaceful and predictable setting promotes safety, confidence, and independence.",
+  },
+  {
+    icon: FaUsers,
+    title: "Specialized Training",
+    text: "Our caregivers receive ongoing education in dementia-specific best practices.",
   },
 ];
+
 
 export const dayInTheLife = [
   {
@@ -652,13 +657,13 @@ export const residentRights = [
 ];
 
 export const moveInRequirements = [
-  "Detailed Medical History",
-  "Current Medication List",
-  "Primary Care Physician Info",
-  "Insurance Cards & POLST",
-  "Dietary Restrictions/Preferences",
+  "Medical History and Current Diagnoses",
+  "Medication List and Pharmacy Information",
+  "Dietary Needs and Preferences",
   "Emergency Contacts",
-  "Personal Biography (Likes, dislikes, routines)",
+  "Insurance Information",
+  "Physician and Specialist Contacts",
+  "Behavioral or Cognitive Notes to Support Care",
 ];
 
 export const engagementItems = [
@@ -740,7 +745,7 @@ export const homeGallery = {
     {
       id: 2,
       alt: "Cozy bedroom",
-      src: "/images/gallery/pic1.jpg"
+      src: "/images/gallery/pic1.jpg",
     },
     {
       id: 3,

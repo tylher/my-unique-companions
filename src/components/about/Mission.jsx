@@ -20,9 +20,12 @@ const Mission = () => {
           Our Mission
         </span>
         <div className="w-24 h-px bg-[#e35e25] mx-auto mb-6 md:mb-7" />
-        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-white italic">
-          "To provide compassionate, personalized care in a warm and supportive
-          environment where every resident feels safe, respected, and at home."
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl  leading-tight text-white italic">
+          "To provide <b>exceptional, compassionate, and personalized care</b>{" "}
+          that honors the dignity, independence, and unique needs of every
+          resident. We strive to create a warm, supportive home where
+          individuals feel safe, respected, and genuinely cared for — a place
+          where comfort and connection come first"
         </h2>
         <p className="text-gray-300 mt-6 md:mt-8 text-base md:text-lg max-w-3xl mx-auto">
           This is not a statement on a wall. It is the intention behind every

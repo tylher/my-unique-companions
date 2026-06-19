@@ -3,7 +3,7 @@ import { memoryCareItems } from "@/data/features";
 export default function MemoryCareSection() {
   return (
     <section
-      className="relative overflow-hidden bg-[#25306b] py-12 md:py-16"
+      className="relative overflow-hidden bg-primary-container py-12 md:py-16"
       id="memory-care"
     >
       <div className="absolute inset-0 flex justify-center pointer-events-none">
@@ -17,18 +17,17 @@ export default function MemoryCareSection() {
             <p className="tracking-[0.2em] text-[#fd7137] font-semibold text-sm sm:text-base">
               SPECIALIST CARE
             </p>
-            <h2 className="mt-4 md:mt-6 text-3xl sm:text-4xl md:text-5xl font-serif text-white leading-tight">
-              Compassionate Memory Care & Developmental Support
+            <h2 className="mt-4 md:mt-6 text-3xl sm:text-4xl md:text-[46px] font-serif text-white leading-tight">
+              Specialized Memory Care (Dementia, Alzheimer's) and Developmental
+              Disabilities
             </h2>
             <p className="mt-4 md:mt-6 italic text-[#bac3ff] text-lg md:text-xl font-serif">
               A calm, predictable environment where every resident feels safe
               and understood.
             </p>
             <p className="mt-6 md:mt-8 text-[#bac3ff] leading-relaxed text-sm sm:text-base">
-              We provide attentive support for residents experiencing
-              memory-related challenges and developmental disabilities, creating
-              an environment built on familiarity, patience, consistency and
-              respect.
+              We offer compassionate support for residents living with dementia,
+              Alzheimer’s, and developmental disabilities.
             </p>
           </div>
 

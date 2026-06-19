@@ -41,9 +41,11 @@ export default function CareersHero() {
               className="mt-4 md:mt-5 text-sm sm:text-base md:text-lg leading-relaxed text-[#bac3ff] max-w-xl"
               {...fadeUp(0.32)}
             >
-              We're looking for compassionate, dedicated individuals who believe
-              in care with dignity, respect, and genuine human connection. If
-              you want to make a real difference every day — this is your place.
+              We are looking for compassionate, reliable, and dedicated
+              individuals who believe in providing care with dignity, respect,
+              and genuine human connection. If you’re passionate about making a
+              meaningful difference in someone’s life, we’d love to welcome you
+              to our team
             </motion.p>
 
             {/* Buttons */}
@@ -148,7 +150,8 @@ export default function CareersHero() {
                     </p>
                   </div>
 
-                  <motion.div
+                  <motion.a
+                    href="#apply"
                     className="bg-secondary-container text-on-secondary rounded-full p-2 md:p-3 shadow-lg"
                     animate={{ x: [0, 4, 0] }}
                     transition={{
@@ -159,7 +162,7 @@ export default function CareersHero() {
                     }}
                   >
                     <MdArrowForward className="text-lg md:text-2xl" />
-                  </motion.div>
+                  </motion.a>
                 </div>
               </motion.div>
             </div>

@@ -2,11 +2,12 @@
 import AboutServices from "@/components/about/AboutServices";
 import CarePhilosophySection from "@/components/about/CarePhilosophySection";
 import CommitmentBanner from "@/components/about/CommitmentBanner";
+import CoreValues from "@/components/about/CoreValues";
 import HomeFeeling from "@/components/about/HomeFeeling";
 import Mission from "@/components/about/Mission";
 import Vision from "@/components/about/Vision";
+import style from "@/components/legacy.module.css";
 import Image from "next/image";
-import style from "@/components/legacy.module.css"
 
 const AboutPage = () => {
   return (
@@ -28,9 +29,11 @@ const AboutPage = () => {
             Where Every Resident Feels Truly at Home
           </h1>
           <p className="text-base md:text-lg font-body text-on-surface-variant max-w-lg mx-auto md:mx-0">
-            At Unique Companions AFH, we transcend traditional care by fostering
-            a nurturing environment where dignity and personalized attention
-            create a sanctuary for your loved ones.
+            Unique Companions AFH is a resident centered Adult Family Home in
+            Washington State, dedicated to providing compassionate, dignified,
+            and personalized care for adults who need support with daily living,
+            memory care, or long term assistance. We create an environment where
+            every resident feels safe, valued, and truly at home.
           </p>
         </div>
 
@@ -87,6 +90,7 @@ const AboutPage = () => {
       <section>
         <Vision />
       </section>
+      <CoreValues />
       <section>
         <CommitmentBanner />
       </section>

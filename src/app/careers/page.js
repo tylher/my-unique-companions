@@ -1,6 +1,7 @@
 import ApplicationSection from "@/components/career/ApplicationSection";
 import BenefitsSection from "@/components/career/BenefitSection";
 import CareersHero from "@/components/career/CareersHero";
+import PartnershipSection from "@/components/resources/Partnership";
 import QualificationsSection from "@/components/career/Qualitifications";
 import ResponsibilitiesSection from "@/components/career/Responsibilities";
 import TypicalShift from "@/components/career/TypicalShift";
@@ -15,6 +16,7 @@ const CareerPage = () => {
       </div>
 
       <TypicalShift />
+    
       <ResponsibilitiesSection />
       <QualificationsSection />
       <BenefitsSection />

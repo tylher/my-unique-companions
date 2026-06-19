@@ -45,8 +45,8 @@ const Vision = () => {
           Our Vision
         </h2>
         <p className="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
-          To be a trusted home where residents experience purpose, belonging,
-          and joy every day. We envision a community where every person,
+          To be a trusted home where residents experience <b>purpose, belonging,
+          and joy</b> every day. We envision a community where every person,
           regardless of age or ability, can thrive in a place that truly feels
           like family.
         </p>

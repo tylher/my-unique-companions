@@ -55,6 +55,14 @@ const OurPromiseToYou = () => {
               physical well-being without compromising freedom.
             </span>
           </li>
+
+          <li className="flex items-start gap-3">
+            <MdOutlineSelfImprovement className="text-secondary-container mt-1 text-lg shrink-0" />
+            <span className="font-body text-sm sm:text-base text-on-surface-variant">
+              <strong>Respect for Dignity & Independence:</strong> Respect for
+              each resident’s dignity and independence.
+            </span>
+          </li>
         </ul>
       </div>
 
@@ -95,6 +103,19 @@ const OurPromiseToYou = () => {
             <p className="font-body text-sm sm:text-base text-on-surface-variant">
               We empower residents to maintain control over daily routines and
               decisions.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-display text-base sm:text-lg font-bold text-primary mb-2 flex items-center gap-2">
+              <MdOutlineHome className="text-primary-container" />A Home-Like
+              Environment
+            </h3>
+
+            <p className="font-body text-sm sm:text-base text-on-surface-variant">
+              Residents enjoy a peaceful, welcoming home with comfortable living
+              spaces, nutritious meals, and a calm atmosphere designed for
+              safety and comfort.
             </p>
           </div>
         </div>

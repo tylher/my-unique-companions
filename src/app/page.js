@@ -100,7 +100,7 @@ const HomePage = () => {
             >
               A Place That Feels Like Home.
               <br />
-              <motion.span variants={fadeUpVariants} className="text-primary/80">
+              <motion.span variants={fadeUpVariants} className="text-white">
                 Care That Feels Like Family.
               </motion.span>
             </motion.h1>

@@ -12,7 +12,7 @@ const stackedCards = [
   {
     icon: MdTrendingUp,
     title: "Growth & Training",
-    body: "We invest in your career with specialized training programs, including advanced Dementia Care techniques and WA State Standards compliance, empowering you to become a leader in elder care.",
+    body: "We invest in your career with specialized training programs that include dementia and memory care support, mental health awareness, de-escalation techniques, medication assistance, Washington State care standards, and professional conduct with strong emphasis on client rights. These programs empower you to grow into a confident leader in elder care.",
     titleColor: "text-[#0d1955]",
   },
   {
@@ -31,7 +31,7 @@ const stackedCards = [
 
 export default function WhyWorkHere() {
   return (
-    <section className="bg-surface-bright py-10 sm:py-12 lg:py-16">
+    <section className="bg-surface-bright py-10 sm:py-12 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-10">
         {/* ================= HEADER ================= */}
         <motion.div
