@@ -24,7 +24,7 @@ export default function HomeGallerySection() {
           ))}
         </div>
 
-        <CTAButton className="bg-primary px-8 py-4 text-white" href="/gallery">
+        <CTAButton className="bg-primary px-8 py-4 text-white" href="/resources/gallery">
           {homeGallery.buttonText}
 
           <span className="material-symbols-outlined ml-2 text-lg">

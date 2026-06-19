@@ -25,7 +25,7 @@ export default function ClosingCTASection() {
 
         <CTAButton
           className="bg-secondary-container px-10 py-5 text-lg text-white shadow-secondary-container/30 font-body font-medium"
-          href={"/services#memory-care"}
+          href={"/contact"}
         >
           {closingCTAData.buttonText}
         </CTAButton>

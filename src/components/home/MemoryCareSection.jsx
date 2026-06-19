@@ -22,7 +22,7 @@ export default function MemoryCareSection() {
           <ChipList items={memoryCareData.tags} />
         </div>
 
-        <CTAButton className="bg-[#fd7137] px-8 py-4 text-white shadow-secondary-container/20">
+        <CTAButton className="bg-[#fd7137] px-8 py-4 text-white shadow-secondary-container/20" href="/services#memory-care">
           {memoryCareData.buttonText}
 
           <span className="material-symbols-outlined ml-2 text-lg">
