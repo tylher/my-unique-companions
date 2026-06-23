@@ -90,7 +90,7 @@ const OurPromiseToYou = () => {
               Specialized Training
             </h3>
             <p className="font-body text-sm sm:text-base text-on-surface-variant">
-              Our caregivers recieve continious education training in Mental
+              Our caregivers receive continious education training in Mental
               health, Dementia Developmental Disabilities that conforms to
               Washington State care standards
             </p>
