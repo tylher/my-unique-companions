@@ -913,12 +913,12 @@ export const galleryImages = [
 ];
 
 export const trainingItems = [
-  "CPR & First Aid Certified",
-  "Dementia Care Training",
-  "Medication Management",
-  "Nutrition & Dietary Planning",
-  "Mobility Assistance",
-  "Continuous Education",
+  "Dementia specific care",
+  "Mental health awareness",
+  "De escalation and safety techniques",
+  "Washington State home care compliance standards",
+  "Medication assistance procedures",
+  "Client rights, confidentiality, and professional conduct",
 ];
 
 export const commitmentCards = [

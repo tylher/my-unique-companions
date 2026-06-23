@@ -41,7 +41,7 @@ const Mission = () => {
         >
           <path
             d="M0,40 C480,120 960,-40 1440,40 L1440,0 L0,0 Z"
-            fill="#f2f4f6"
+            fill="#ffffff"
           />
         </svg>
       </div>

@@ -41,7 +41,7 @@ const iconVariants = {
 
 export default function CareTeamSection() {
   return (
-    <section className="bg-surface-container-lowest py-10 md:py-12 px-4 sm:px-6 md:px-[64px]">
+    <section className="bg-surface-container-lowest py-10 md:py-12 px-4 sm:px-6 md:px-[64px] w-full">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
         {/* Left — text block */}
         <motion.div
@@ -94,6 +94,11 @@ export default function CareTeamSection() {
           ))}
         </motion.div>
       </div>
+      <span className=" font-body text-on-surface-variant mx-auto mt-10 block text-center">
+        We prioritize <b>consistent staffing</b>, ensuring residents are
+        supported by familiar, trusted caregivers who understand their routines,
+        personalities, and preferences.
+      </span>
     </section>
   );
 }

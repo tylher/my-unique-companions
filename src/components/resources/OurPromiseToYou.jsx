@@ -10,7 +10,7 @@ import {
 
 const OurPromiseToYou = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 sm:px-8 lg:px-20 py-12 sm:py-16 mb-section-gap-md">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 sm:px-8 lg:px-20 py-12  mb-section-gap-md">
       {/* LEFT */}
       <div className="bg-surface-container-lowest rounded-xl p-6 sm:p-8 md:p-12 shadow-xl border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300">
         <h2 className="font-display font-semibold text-2xl sm:text-3xl text-primary mb-6">
