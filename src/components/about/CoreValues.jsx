@@ -2,15 +2,19 @@
 
 import { motion } from "framer-motion";
 import {
-    FaComment,
+  FaBalanceScale,
+  FaBrain,
+  FaComment,
   FaHandshake,
+  FaHandsHelping,
   FaHeart,
   FaHome,
+  FaPills,
   FaSeedling,
   FaShieldAlt,
+  FaUserShield,
 } from "react-icons/fa";
 import { FaShield } from "react-icons/fa6";
-import { FiMessageCircle } from "react-icons/fi";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const values = [
@@ -57,6 +61,59 @@ const values = [
       "We maintain open, transparent communication with families, healthcare providers, and residents to ensure continuity and trust.",
   },
 ];
+
+const trainingAreas = [
+  {
+    icon: FaBrain,
+    title: "Dementia Care",
+  },
+  {
+    icon: FaHandsHelping,
+    title: "Mental Health Support",
+  },
+  {
+    icon: FaShieldAlt,
+    title: "De-escalation & Safety",
+  },
+  {
+    icon: FaPills,
+    title: "Medication Assistance",
+  },
+  {
+    icon: FaBalanceScale,
+    title: "WA State Compliance",
+  },
+  {
+    icon: FaUserShield,
+    title: "Client Rights & Privacy",
+  },
+];
+
+const commitmentContainerVariants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
 const containerVariants = {
@@ -146,8 +203,9 @@ function ValueCard({ icon: Icon, title, description }) {
 // ─── Main Component ───────────────────────────────────────────────────────────
 export default function CoreValues() {
   return (
-    <section className="relative overflow-hidden py-10 lg:py-16 bg-surface">
+    <section className="relative overflow-hidden py-10 lg:py-16 bg-surface ">
       {/* Background glow — top left (blue) */}
+
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full"
@@ -226,7 +284,7 @@ export default function CoreValues() {
               <div
                 key={value.title}
                 className={
-                  isLastOdd ? "sm:col-span-2 lg:col-span-1 lg:col-start-1" : ""
+                  isLastOdd ? "sm:col-span-2 lg:col-span-1 lg:col-start-2" : ""
                 }
               >
                 <ValueCard
@@ -239,40 +297,63 @@ export default function CoreValues() {
           })}
         </motion.div>
 
+        <div>
+          <div className="mx-auto max-w-6xl px-6 mt-10 md:mt-16">
+            <motion.div
+              variants={commitmentContainerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="relative overflow-hidden rounded-[32px] bg-primary-container p-8 md:p-12 lg:p-16"
+            >
+              {/* Decorative Background */}
+              <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-secondary-container/20 blur-3xl" />
+              <div className="absolute -left-16 -bottom-16 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
+
+              <div className="relative z-10">
+                {/* Accent */}
+                <div className="mx-auto mb-8 h-1 w-20 rounded-full bg-secondary-container" />
+
+                <motion.h2
+                  variants={itemVariants}
+                  className="mb-6 text-center font-display text-2xl font-semibold text-white md:text-5xl"
+                  style={{
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                  }}
+                >
+                  Our Commitment to You
+                </motion.h2>
+
+                <motion.p
+                  variants={itemVariants}
+                  className="mx-auto  text-center text-sm leading-relaxed text-white/90 md:text-xl"
+                >
+                  At Unique Companions AFH, we are committed to creating a home
+                  where every resident feels valued, supported, and empowered.
+                  We care for each individual as we would our own family - with
+                  warmth, compassion, respect, and unwavering dedication.
+                </motion.p>
+
+                <br />
+                <br />
+
+                <motion.p
+                  variants={itemVariants}
+                  className="mx-auto text-center text-sm leading-relaxed text-white/90 md:text-xl"
+                >
+                  Our commitment is to provide high-quality, compassionate care
+                  while maintaining transparent communication with families and
+                  upholding Washington State standards. We support every
+                  resident with dignity and respect, ensuring they can live in a
+                  safe, comfortable, and nurturing environment filled with
+                  purpose, independence, and joy.
+                </motion.p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
         {/* Commitment block */}
-        <motion.div
-          variants={commitmentVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mx-auto mt-20 max-w-3xl rounded-3xl px-10 py-14 text-center lg:px-16 bg-primary-container"
-        >
-          {/* Orange accent bar */}
-          <div className="mx-auto mb-7 h-1 w-16 rounded-full bg-secondary-container" />
-
-          <h3
-            className="mb-5 text-2xl md:text-4xl font-semibold font-display"
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#ffffff",
-            }}
-          >
-            Our Commitment to You
-          </h3>
-
-          <p
-            className="text-lg leading-relaxed text-inverse-on-surface"
-            style={{
-              fontFamily: "'Manrope', system-ui, sans-serif",
-              lineHeight: "1.6",
-            }}
-          >
-            Unique Companions AFH is committed to creating a home where
-            residents feel valued, supported, and empowered. We care for each
-            person as we would our own family — with warmth, respect, and
-            unwavering dedication.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

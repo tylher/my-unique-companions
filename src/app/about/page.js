@@ -1,7 +1,9 @@
 "use client";
 import AboutServices from "@/components/about/AboutServices";
 import CarePhilosophySection from "@/components/about/CarePhilosophySection";
+import CareTeamSection from "@/components/about/CareteamSection";
 import CommitmentBanner from "@/components/about/CommitmentBanner";
+import CommitmentSection from "@/components/about/CommitmentSection";
 import CoreValues from "@/components/about/CoreValues";
 import HomeFeeling from "@/components/about/HomeFeeling";
 import Mission from "@/components/about/Mission";
@@ -78,12 +80,14 @@ const AboutPage = () => {
       <section>
         <CarePhilosophySection />
       </section>
+
       <section>
         <AboutServices />
       </section>
       <section>
         <HomeFeeling />
       </section>
+      <CareTeamSection />
       <section>
         <Mission />
       </section>

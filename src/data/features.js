@@ -30,6 +30,8 @@ import {
   MdPsychology,
   MdRecordVoiceOver,
   MdRestaurant,
+  MdShield,
+  MdSpa,
   MdVerified,
   MdVerifiedUser,
   MdVisibility,
@@ -907,5 +909,42 @@ export const galleryImages = [
     title: "Accessible Restroom",
     alt: "A clean and safe bathroom",
     src: "/images/gallery/pic21.jpg",
+  },
+];
+
+export const trainingItems = [
+  "CPR & First Aid Certified",
+  "Dementia Care Training",
+  "Medication Management",
+  "Nutrition & Dietary Planning",
+  "Mobility Assistance",
+  "Continuous Education",
+];
+
+export const commitmentCards = [
+  {
+    id: 1,
+    icon: MdFavorite,
+    label: "Dignity in Care",
+  },
+  {
+    id: 2,
+    icon: MdShield,
+    label: "Unwavering Safety",
+  },
+  {
+    id: 3,
+    icon: MdGroup,
+    label: "Community First",
+  },
+  {
+    id: 4,
+    icon: MdSpa,
+    label: "Holistic Wellness",
+  },
+  {
+    id: 5,
+    icon: MdHandshake,
+    label: "Transparent Communication",
   },
 ];
