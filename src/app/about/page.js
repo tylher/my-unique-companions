@@ -28,7 +28,7 @@ const AboutPage = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-primary leading-tight">
             Where Every Resident Feels Truly at Home
           </h1>
-          <p className="text-base md:text-lg font-body text-on-surface-variant max-w-lg mx-auto md:mx-0">
+          <p className="text-base md:text-[17px] font-body text-on-surface-variant max-w-lg md:max-w-xl mx-auto md:mx-0">
             Unique Companions AFH is a resident centered Adult Family Home in
             Washington State, dedicated to providing compassionate, dignified,
             and personalized care for adults who need support with daily living,

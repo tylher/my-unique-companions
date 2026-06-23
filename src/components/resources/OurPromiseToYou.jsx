@@ -90,8 +90,9 @@ const OurPromiseToYou = () => {
               Specialized Training
             </h3>
             <p className="font-body text-sm sm:text-base text-on-surface-variant">
-              Continuous education in dementia care, mobility assistance, and
-              communication techniques.
+              Our caregivers recieve continious education training in Mental
+              health, Dementia Developmental Disabilities that conforms to
+              Washington State care standards
             </p>
           </div>
 

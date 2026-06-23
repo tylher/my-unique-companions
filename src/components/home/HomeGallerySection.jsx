@@ -2,6 +2,7 @@ import CTAButton from "@/components/ui/CTAButton";
 import GalleryCard from "@/components/ui/GalleryCard";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { homeGallery } from "@/data/features";
+import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 
 export default function HomeGallerySection() {
@@ -15,16 +16,33 @@ export default function HomeGallerySection() {
         />
 
         <div className="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 lg:grid-cols-4">
-          {homeGallery.images.map((image) => (
-            <GalleryCard
-              key={image.id}
-              image={image}
-              overlayText={image.overlayText}
-            />
-          ))}
+          {homeGallery.images.map((image, id) => {
+            if (id == homeGallery.images.length - 1) {
+              return (
+                <Link href={"/resources/gallery"}>
+                  <GalleryCard
+                    key={image.id}
+                    image={image}
+                    overlayText={image.overlayText}
+                  />
+                </Link>
+              );
+            } else {
+              return (
+                <GalleryCard
+                  key={image.id}
+                  image={image}
+                  overlayText={image.overlayText}
+                />
+              );
+            }
+          })}
         </div>
 
-        <CTAButton className="bg-primary px-8 py-4 text-white" href="/resources/gallery">
+        <CTAButton
+          className="bg-primary px-8 py-4 text-white"
+          href="/resources/gallery"
+        >
           {homeGallery.buttonText}
 
           <span className="material-symbols-outlined ml-2 text-lg">

@@ -10,7 +10,7 @@ const ContactInfoItem = ({ icon: Icon, title, content, data, subtitle }) => {
           {title}
         </h4>
 
-        <div className="font-body text-sm sm:text-base text-on-surface-variant break-words">
+        <div className="font-body text-sm sm:text-base text-on-surface-variant wrap-break-word">
           {content}
 
           <div className="flex flex-wrap gap-0.5">
@@ -22,7 +22,7 @@ const ContactInfoItem = ({ icon: Icon, title, content, data, subtitle }) => {
                     <a
                       href={item.link}
                       key={id}
-                      className="hover:text-primary transition-colors break-words"
+                      className="hover:text-primary transition-colors wrap-break-word"
                     >
                       {item.text}
                     </a>

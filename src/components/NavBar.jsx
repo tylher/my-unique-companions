@@ -14,12 +14,12 @@ const links = [
     name: "Resources",
     children: [
       {
-        name: "Gallery",
-        href: "/resources/gallery",
-      },
-      {
         name: "Welcome Packet",
         href: "/resources/welcome-packet",
+      },
+      {
+        name: "Gallery",
+        href: "/resources/gallery",
       },
     ],
   },

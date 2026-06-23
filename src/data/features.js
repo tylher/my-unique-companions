@@ -227,8 +227,7 @@ export const philosophy = [
     title: "Personalized Care",
     text: "Care plans are tailored to each person’s unique needs, preferences, and health requirements.",
     icon: MdOutlineFavorite,
-    image:
-      "https://images.unsplash.com/photo-1576765607924-3f7b8410a787?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/personalized-care.jpg",
   },
   {
     title: "Warm Home Environment",
@@ -396,7 +395,7 @@ export const detailedServices = [
     quote:
       "We maintain clear communication with families and medical professionals to keep care consistent and reliable.",
     chip: "Safe & Reliable",
-    image: "/images/medical-partnership.jpg",
+    image: "/images/medical-assistance.jpg",
   },
 
   {
@@ -518,7 +517,7 @@ export const detailedServices = [
 ];
 
 export const memoryCareItems = [
-   {
+  {
     icon: FaBrain,
     title: "Structured Routines",
     text: "Consistent daily schedules provide comfort, familiarity, and stability.",
@@ -544,7 +543,6 @@ export const memoryCareItems = [
     text: "Our caregivers receive ongoing education in dementia-specific best practices.",
   },
 ];
-
 
 export const dayInTheLife = [
   {
@@ -634,7 +632,7 @@ export const residentRights = [
     icon: MdMedicalServices,
     title: "Safe Care",
     description:
-      "To reside in a physically safe, clean environment free from abuse, neglect, or unreasonable restraint.",
+      "To reside in a physically safe, clean environment free from abuse and neglect.",
   },
   {
     icon: MdRecordVoiceOver,
@@ -683,25 +681,19 @@ export const contactDetails = [
   {
     icon: MdLocationOn,
     title: "Our Residence",
-    content: (
-      <>
-        1234 Serenity Lane
-        <br />
-        Bellevue, WA 98004
-      </>
-    ),
+    content: <>710 ROE STREET, STEILACOOM, 98388</>,
   },
   {
     icon: MdPhone,
     title: "Phone",
     data: [
       {
-        link: "tel:+14255157787",
-        text: "(425) 515-7787",
-      },
-      {
         link: "tel:+12533044293",
         text: "(253) 304-4293",
+      },
+      {
+        link: "tel:+14255157787",
+        text: "(425) 515-7787",
       },
     ],
     subtitle: "Available 9am - 6pm daily",
@@ -745,7 +737,7 @@ export const homeGallery = {
     {
       id: 2,
       alt: "Cozy bedroom",
-      src: "/images/gallery/pic1.jpg",
+      src: "/images/gallery/pic8.jpg",
     },
     {
       id: 3,
@@ -756,7 +748,7 @@ export const homeGallery = {
       id: 4,
       alt: "Garden patio",
       src: "/images/gallery/pic17.jpg",
-      overlayText: "+16 More Photos",
+      overlayText: "+10 More Photos",
     },
   ],
 };
@@ -812,15 +804,6 @@ export const categories = [
 // "small"  -> stacked small block (md:col-span-4, paired two-up)
 export const galleryImages = [
   {
-    id: 1,
-    category: "gardens",
-    size: "wide",
-    badge: "Tranquil Gardens",
-    title: "The Sensory Pathway",
-    alt: "An ultra-wide, cinematic view of a beautifully landscaped outdoor garden path at a premium elder care residence. Lush green foliage surrounds a smooth, accessible walkway under dappled sunlight.",
-    src: "/images/gallery/pic2.jpg",
-  },
-  {
     id: 2,
     category: "dining",
     size: "large",
@@ -834,13 +817,6 @@ export const galleryImages = [
     size: "small",
     alt: "A close-up, high-quality shot of a comfortable, premium reading nook bathed in warm afternoon sunlight, with a plush armchair and a wooden side table holding a ceramic teacup.",
     src: "/images/gallery/pic3.jpg",
-  },
-  {
-    id: 4,
-    category: "suites",
-    size: "small",
-    alt: "Detail shot of a beautifully appointed private bedroom suite in a luxury care facility, with crisp white linens, a soft blue throw blanket, and warm bedside lighting.",
-    src: "/images/gallery/pic1.jpg",
   },
   {
     id: 5,
@@ -860,13 +836,6 @@ export const galleryImages = [
     src: "/images/gallery/pic8.jpg",
   },
   {
-    id: 7,
-    category: "living",
-    size: "small",
-    alt: "A warm, sunlit corner of the main living room featuring soft neutral-toned sofas and a coffee table with fresh flowers.",
-    src: "/images/gallery/pic7.jpg",
-  },
-  {
     id: 8,
     category: "gardens",
     size: "small",
@@ -874,27 +843,11 @@ export const galleryImages = [
     src: "/images/gallery/pic6.jpg",
   },
   {
-    id: 9,
-    category: "dining",
-    size: "wide",
-    badge: "Family-Style Dining",
-    title: "The Gathering Table",
-    alt: "A long, elegant dining table set for a family-style meal, surrounded by comfortable chairs, with warm pendant lighting overhead.",
-    src: "/images/gallery/pic11.jpg",
-  },
-  {
     id: 10,
     category: "suites",
     size: "small",
     alt: "A bright private suite bathroom with grab bars discreetly integrated into elegant tilework, balancing safety and luxury.",
     src: "/images/gallery/pic12.jpg",
-  },
-  {
-    id: 11,
-    category: "living",
-    size: "small",
-    alt: "A cozy fireside seating nook with two armchairs facing a warm fireplace, ideal for one-on-one companionship.",
-    src: "/images/gallery/pic9.jpg",
   },
   {
     id: 12,
@@ -910,15 +863,6 @@ export const galleryImages = [
     size: "small",
     alt: "A living space",
     src: "/images/gallery/pic14.jpg",
-  },
-  {
-    id: 14,
-    category: "living",
-    size: "wide",
-    badge: "Shared Spaces",
-    title: "The Sunroom",
-    alt: "A glass-walled sunroom filled with plants and comfortable wicker furniture, offering a bright space for residents to relax during the day.",
-    src: "/images/gallery/pic15.jpg",
   },
   {
     id: 15,
