@@ -66,19 +66,41 @@ function groupIntoBlocks(images) {
     }
 
     if (img.size === "large") {
-      const rest = images.slice(i + 1, i + 3).filter((x) => x.size === "small");
-      blocks.push({ type: "asymmetric", items: [img, ...rest] });
-      i += 1 + rest.length;
+      // Collect immediately following smalls, stopping at the first non-small
+      const smalls = [];
+      let j = i + 1;
+      while (
+        j < images.length &&
+        images[j].size === "small" &&
+        smalls.length < 2
+      ) {
+        smalls.push(images[j]);
+        j++;
+      }
+      blocks.push({ type: "asymmetric", items: [img, ...smalls] });
+      i = j; // advance past everything consumed
       continue;
     }
 
-    // Orphaned smalls
-    const pair = images.slice(i, i + 3).filter((x) => x.size === "small");
-    blocks.push({
-      type: "asymmetric",
-      items: [pair[0], ...pair.slice(1)].filter(Boolean),
-    });
-    i += pair.length || 1;
+    if (img.size === "small") {
+      // Collect a run of smalls (up to 3 for a row of smalls)
+      const smalls = [];
+      let j = i;
+      while (
+        j < images.length &&
+        images[j].size === "small" &&
+        smalls.length < 3
+      ) {
+        smalls.push(images[j]);
+        j++;
+      }
+      blocks.push({ type: "smalls", items: smalls });
+      i = j;
+      continue;
+    }
+
+    // Fallback: skip unknown size to prevent infinite loop
+    i += 1;
   }
 
   return blocks;
@@ -287,6 +309,31 @@ export default function GalleryPage() {
                   onClick={() => openLightboxFor(img)}
                   captionAlign={blockIndex % 2 === 0 ? "left" : "right"}
                 />
+              );
+            }
+
+            if (block.type === "smalls") {
+              return (
+                <motion.div
+                  key={block.items[0].id}
+                  className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6"
+                  variants={revealVariants}
+                >
+                  {block.items.map((img) => (
+                    <SmallTile
+                      key={img.id}
+                      image={img}
+                      onClick={() => openLightboxFor(img)}
+                      className={
+                        block.items.length === 3
+                          ? "md:col-span-4"
+                          : block.items.length === 2
+                            ? "md:col-span-6"
+                            : "md:col-span-4"
+                      }
+                    />
+                  ))}
+                </motion.div>
               );
             }
 

@@ -8,7 +8,7 @@ import Field from "./Field";
 
 const CLOUDINARY_CLOUD_NAME = "dwnoizvpx";
 const CLOUDINARY_UPLOAD_PRESET = "uch_careers";
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mkoabbko";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xrewbkpq";
 
 const fieldVariants = {
   hidden: { opacity: 0, y: 16 },

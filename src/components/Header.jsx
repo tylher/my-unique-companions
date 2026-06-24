@@ -31,13 +31,15 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center justify-between">
-        <Image
-          src="/images/Unique-Companions-Logo.png"
-          alt="Unique Companions AFQ"
-          width={120}
-          height={50}
-          className="object-cover"
-        />
+        <Link href={"/"}>
+          <Image
+            src="/images/Unique-Companions-Logo.png"
+            alt="Unique Companions AFQ"
+            width={120}
+            height={50}
+            className="object-cover"
+          />
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:block">

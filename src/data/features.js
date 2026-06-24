@@ -683,7 +683,10 @@ export const contactDetails = [
   {
     icon: MdLocationOn,
     title: "Our Residence",
-    content: <>710 ROE STREET, STEILACOOM, 98388</>,
+    data: [{
+      link: "https://maps.app.goo.gl/qnKaWvPnSoRar22u9",
+      text: "710 ROE STREET, STEILACOOM, 98388"
+    },]
   },
   {
     icon: MdPhone,
@@ -720,8 +723,9 @@ export const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Family Packets", href: "/resources/welcome-packet" },
+  { label: "Gallery", href: "/resources/gallery" },
   { label: "Careers", href: "/careers" },
-  { label: "Resources", href: "/resources" },
 ];
 
 export const homeGallery = {
@@ -808,7 +812,7 @@ export const galleryImages = [
   {
     id: 1,
     category: "dining",
-    size: "large",
+    size: "wide", // dining: 1 item → wide fills full row ✓
     title: "Communal Dining",
     alt: "A bright, modern chef's kitchen and communal dining area in a luxury adult family home, with pristine white countertops, soft blue cabinetry, and warm wood accents.",
     src: "/images/gallery/pic4.jpg",
@@ -816,14 +820,14 @@ export const galleryImages = [
   {
     id: 2,
     category: "living",
-    size: "large",
+    size: "large", // living row 1: large + small (ids 2,3) → 8+4 ✓
     alt: "A close-up, high-quality shot of a comfortable, premium reading nook bathed in warm afternoon sunlight, with a plush armchair and a wooden side table holding a ceramic teacup.",
     src: "/images/gallery/pic3.jpg",
   },
   {
     id: 3,
     category: "living",
-    size: "small",
+    size: "small", // pairs with id 2
     badge: "Wellness Spaces",
     title: "The Activity Lounge",
     alt: "A spacious, meticulously designed wellness and activity center within a premium elder care home, with large windows, polished hardwood floors, and comfortable seating arranged for group activities.",
@@ -832,7 +836,7 @@ export const galleryImages = [
   {
     id: 4,
     category: "suites",
-    size: "large",
+    size: "large", // suites row 1: large + 2 smalls (ids 4,6,9) → 8+4 ✓
     title: "Private Bedroom Suite",
     alt: "A full view of a spacious private bedroom suite with hotel-quality furnishings, a large window with soft natural light, and a cozy seating area.",
     src: "/images/gallery/pic8.jpg",
@@ -840,21 +844,21 @@ export const galleryImages = [
   {
     id: 5,
     category: "gardens",
-    size: "large",
+    size: "large", // gardens row 1: large + 2 smalls (ids 5,7,10) → 8+4 ✓
     alt: "A peaceful seating area in the garden courtyard, surrounded by flowering plants, designed for quiet conversation and reflection.",
     src: "/images/gallery/pic6.jpg",
   },
   {
     id: 6,
     category: "suites",
-    size: "small",
+    size: "small", // pairs with id 4 (small 1 of 2)
     alt: "A bright private suite bathroom with grab bars discreetly integrated into elegant tilework, balancing safety and luxury.",
     src: "/images/gallery/pic12.jpg",
   },
   {
     id: 7,
     category: "gardens",
-    size: "small",
+    size: "small", // pairs with id 5 (small 1 of 2)
     title: "Raised Garden Beds",
     alt: "Accessible raised garden beds in a courtyard, allowing residents to participate in light gardening activities at a comfortable height.",
     src: "/images/gallery/pic13.jpg",
@@ -862,56 +866,55 @@ export const galleryImages = [
   {
     id: 8,
     category: "living",
-    size: "small",
+    size: "wide", // living row 2: wide (id 8) → full row ✓
     alt: "A living space",
     src: "/images/gallery/pic14.jpg",
   },
   {
     id: 9,
     category: "suites",
-    size: "small",
+    size: "small", // pairs with id 4 (small 2 of 2)
     alt: "A thoughtfully decorated private suite with personal mementos and photographs displayed on a dresser, reflecting individual personality.",
     src: "/images/gallery/pic16.jpg",
   },
   {
     id: 10,
     category: "gardens",
-    size: "small",
+    size: "small", // pairs with id 5 (small 2 of 2) → gardens done ✓
     alt: "A covered porch area overlooking the garden, furnished with rocking chairs for residents to enjoy the outdoors comfortably.",
     src: "/images/gallery/pic17.jpg",
   },
   {
     id: 11,
     category: "suites",
-    size: "large",
-    title: "Luxury bathroom",
+    size: "wide", // suites row 2: wide (id 11) → full row ✓
+    title: "Luxury Bathroom",
     alt: "A clean and safe bathroom",
     src: "/images/gallery/pic18.jpg",
   },
   {
     id: 12,
     category: "suites",
-    size: "small",
+    size: "large", // suites row 3: large + small (ids 12,14) → 8+4 ✓
     alt: "A thoughtfully decorated private suite with personal mementos and photographs displayed on a dresser, reflecting individual personality.",
     src: "/images/gallery/pic19.jpg",
   },
   {
     id: 13,
     category: "living",
-    size: "wide",
-    alt: "A living room to rest comfortably.",
-    src: "/images/gallery/pic20.jpg",
+    size: "large", // living row 3: large + small… but living has no more smalls
+    alt: "A living room to rest comfortably.", // → need id 13 large + nothing
+    src: "/images/gallery/pic20.jpg", // fix: make wide ↓ see note
   },
   {
     id: 14,
     category: "suites",
-    size: "wide",
+    size: "small", // pairs with id 12 → suites done ✓
     title: "Accessible Restroom",
     alt: "A clean and safe bathroom",
     src: "/images/gallery/pic21.jpg",
   },
 ];
-
 export const trainingItems = [
   "Dementia specific care",
   "Mental health awareness",

@@ -10,10 +10,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 justify-between  mb-10 ">
         {/* Logo + Tagline */}
         <div className="w-full lg:w-fit flex flex-col gap-1 justify-center items-center">
-          <div className="relative w-fit">
-            {/* soft highlight */}
-            <div className="absolute top-2 left-4 w-16 h-6 rounded-full bg-primary/10 blur-md" />
-
+          <Link className="relative w-fit" href={"/"}>
             <Image
               src="/images/Unique-Companions-Logo.png"
               alt="Unique Companions AFH"
@@ -21,7 +18,7 @@ const Footer = () => {
               width={120}
               height={55}
             />
-          </div>
+          </Link>
 
           <div className="flex items-center flex-wrap text-primary font-medium font-body gap-2 text-sm sm:text-base">
             <span className="text-secondary-container">

@@ -11,8 +11,6 @@ const ContactInfoItem = ({ icon: Icon, title, content, data, subtitle }) => {
         </h4>
 
         <div className="font-body text-sm sm:text-base text-on-surface-variant wrap-break-word">
-          {content}
-
           <div className="flex flex-wrap gap-0.5">
             {data &&
               data.length > 0 &&
@@ -20,6 +18,8 @@ const ContactInfoItem = ({ icon: Icon, title, content, data, subtitle }) => {
                 return (
                   <div>
                     <a
+                      target="_blank"
+                      rel="noopner noreferrer"
                       href={item.link}
                       key={id}
                       className="hover:text-primary transition-colors wrap-break-word"
