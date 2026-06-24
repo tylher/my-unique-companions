@@ -110,11 +110,15 @@ const Footer = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-on-surface-variant/20 flex flex-col  justify-center items-center gap-3 py-5 text-center ">
+      <div className="border-t border-on-surface-variant/20 flex justify-center items-center gap-3 py-5 text-center ">
         <p className="text-xs sm:text-sm text-on-surface-variant">
           &copy; {new Date().getFullYear()} Unique Companions AFH. All rights
           reserved.
         </p>
+        {/* <span>|</span>
+        <p className="text-sm ">
+          Designed by <a href="https://bservices.com.ng" target="_blank" rel="noreferrer ">Barakhel Services</a>
+        </p> */}
       </div>
     </footer>
   );
