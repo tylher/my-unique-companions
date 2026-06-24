@@ -107,6 +107,8 @@ export default function GalleryPage() {
     [filteredImages],
   );
 
+  console.log(filteredImages);
+
   const openLightboxFor = (image) => {
     const index = filteredImages.findIndex((img) => img.id === image.id);
     setActiveIndex(index);

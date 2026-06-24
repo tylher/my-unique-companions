@@ -87,13 +87,13 @@ const Footer = () => {
                 <MdPhone />{" "}
               </span>{" "}
               <div>
-                <a href="tel:+14255157787" className="hover:text-primary">
-                  (425) 515-7787
-                </a>
-                <span>,</span>
                 <a href="tel:+12533044293" className="hover:text-primary">
                   {" "}
                   (253) 304-4293
+                </a>
+                <span>, </span>
+                <a href="tel:+14255157787" className="hover:text-primary">
+                  (425) 515-7787
                 </a>
               </div>
             </div>
