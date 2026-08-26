@@ -802,6 +802,7 @@ export const categories = [
   { id: "suites", label: "Private Suites" },
   { id: "gardens", label: "Gardens" },
   { id: "dining", label: "Dining" },
+  { id: "walk-way", label: "Walk Way" },
 ];
 
 // `size` controls the grid treatment on the page:
@@ -815,14 +816,14 @@ export const galleryImages = [
     size: "wide", // dining: 1 item → wide fills full row ✓
     title: "Communal Dining",
     alt: "A bright, modern chef's kitchen and communal dining area in a luxury adult family home, with pristine white countertops, soft blue cabinetry, and warm wood accents.",
-    src: "/images/gallery/pic4.jpg",
+    src: "/images/gallery/dining-1.jpg",
   },
   {
     id: 2,
     category: "living",
     size: "large", // living row 1: large + small (ids 2,3) → 8+4 ✓
     alt: "A close-up, high-quality shot of a comfortable, premium reading nook bathed in warm afternoon sunlight, with a plush armchair and a wooden side table holding a ceramic teacup.",
-    src: "/images/gallery/pic3.jpg",
+    src: "/images/gallery/living-room-1.jpg",
   },
   {
     id: 3,
@@ -831,58 +832,66 @@ export const galleryImages = [
     badge: "Wellness Spaces",
     title: "The Activity Lounge",
     alt: "A spacious, meticulously designed wellness and activity center within a premium elder care home, with large windows, polished hardwood floors, and comfortable seating arranged for group activities.",
-    src: "/images/gallery/pic5.jpg",
+    src: "/images/gallery/living-room-2.jpg",
   },
   {
     id: 4,
-    category: "suites",
+    category: "living",
     size: "large", // suites row 1: large + 2 smalls (ids 4,6,9) → 8+4 ✓
-    title: "Private Bedroom Suite",
+    title: "Private living room Suite",
     alt: "A full view of a spacious private bedroom suite with hotel-quality furnishings, a large window with soft natural light, and a cozy seating area.",
-    src: "/images/gallery/pic8.jpg",
+    src: "/images/gallery/living-room-3.jpg",
+  },
+  {
+    id: 17,
+    category: "walk-way",
+    size: "small", // suites row 1: large + 2 smalls (ids 4,6,9) → 8+4 ✓
+    title: "Private living room Suite",
+    alt: "A full view of a spacious private bedroom suite with hotel-quality furnishings, a large window with soft natural light, and a cozy seating area.",
+    src: "/images/gallery/passage-4.jpg",
   },
   {
     id: 5,
-    category: "gardens",
+    category: "suites",
     size: "large", // gardens row 1: large + 2 smalls (ids 5,7,10) → 8+4 ✓
     alt: "A peaceful seating area in the garden courtyard, surrounded by flowering plants, designed for quiet conversation and reflection.",
-    src: "/images/gallery/pic6.jpg",
+    src: "/images/gallery/room-1_1.jpg",
   },
   {
     id: 6,
     category: "suites",
     size: "small", // pairs with id 4 (small 1 of 2)
     alt: "A bright private suite bathroom with grab bars discreetly integrated into elegant tilework, balancing safety and luxury.",
-    src: "/images/gallery/pic12.jpg",
+    src: "/images/gallery/room-1_2.jpg",
   },
   {
     id: 7,
-    category: "gardens",
+    category: "suites",
     size: "small", // pairs with id 5 (small 1 of 2)
-    title: "Raised Garden Beds",
+    title: "Comfortable bedroom",
     alt: "Accessible raised garden beds in a courtyard, allowing residents to participate in light gardening activities at a comfortable height.",
-    src: "/images/gallery/pic13.jpg",
+    src: "/images/gallery/room-2_1.jpg",
   },
   {
     id: 8,
-    category: "living",
+    category: "suites",
     size: "wide", // living row 2: wide (id 8) → full row ✓
     alt: "A living space",
-    src: "/images/gallery/pic14.jpg",
+    src: "/images/gallery/room-2_2.jpg",
   },
   {
     id: 9,
     category: "suites",
     size: "small", // pairs with id 4 (small 2 of 2)
     alt: "A thoughtfully decorated private suite with personal mementos and photographs displayed on a dresser, reflecting individual personality.",
-    src: "/images/gallery/pic16.jpg",
+    src: "/images/gallery/room-3_1.jpg",
   },
   {
     id: 10,
-    category: "gardens",
+    category: "suites",
     size: "small", // pairs with id 5 (small 2 of 2) → gardens done ✓
-    alt: "A covered porch area overlooking the garden, furnished with rocking chairs for residents to enjoy the outdoors comfortably.",
-    src: "/images/gallery/pic17.jpg",
+    alt: "A well lit and furnished place of rest",
+    src: "/images/gallery/room-3_2.jpg",
   },
   {
     id: 11,
@@ -897,23 +906,47 @@ export const galleryImages = [
     category: "suites",
     size: "large", // suites row 3: large + small (ids 12,14) → 8+4 ✓
     alt: "A thoughtfully decorated private suite with personal mementos and photographs displayed on a dresser, reflecting individual personality.",
-    src: "/images/gallery/pic19.jpg",
+    src: "/images/gallery/room-3_3.jpg",
   },
   {
     id: 13,
-    category: "living",
-    size: "large", // living row 3: large + small… but living has no more smalls
-    alt: "A living room to rest comfortably.", // → need id 13 large + nothing
-    src: "/images/gallery/pic20.jpg", // fix: make wide ↓ see note
+    category: "walk-way",
+    size: "small", // living row 3: large + small… but living has no more smalls
+    alt: "A tidy passage to walk on comfortably.", // → need id 13 large + nothing
+    src: "/images/gallery/passage-1.jpg", // fix: make wide ↓ see note
   },
   {
     id: 14,
+    category: "walk-way",
+    size: "small", // living row 3: large + small… but living has no more smalls
+    alt: "A tidy passage to walk on comfortably.", // → need id 13 large + nothing
+    src: "/images/gallery/passage-3.jpg", // fix: make wide ↓ see note
+  },
+  {
+    id: 15,
     category: "suites",
-    size: "small", // pairs with id 12 → suites done ✓
+    size: "large", // pairs with id 12 → suites done ✓
     title: "Accessible Restroom",
     alt: "A clean and safe bathroom",
     src: "/images/gallery/pic21.jpg",
   },
+  {
+    id: 16,
+    category: "walk-way",
+    size: "small", // pairs with id 12 → suites done ✓
+    title: "Accessible Passage area",
+    alt: "A clean and safe passage area",
+    src: "/images/gallery/passage-5.jpg",
+  },
+  {
+    id: 18,
+    category: "walk-way",
+    size: "small", // pairs with id 12 → suites done ✓
+    title: "Accessible Passage area",
+    alt: "A clean and safe passage area",
+    src: "/images/gallery/passage-6.jpg",
+  },
+ 
 ];
 export const trainingItems = [
   "Dementia specific care",
