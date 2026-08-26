@@ -899,7 +899,7 @@ export const galleryImages = [
     size: "wide", // suites row 2: wide (id 11) → full row ✓
     title: "Luxury Bathroom",
     alt: "A clean and safe bathroom",
-    src: "/images/gallery/pic18.jpg",
+    src: "/images/gallery/restroom-2.jpg",
   },
   {
     id: 12,
@@ -925,10 +925,10 @@ export const galleryImages = [
   {
     id: 15,
     category: "suites",
-    size: "large", // pairs with id 12 → suites done ✓
+    size: "small", // pairs with id 12 → suites done ✓
     title: "Accessible Restroom",
     alt: "A clean and safe bathroom",
-    src: "/images/gallery/pic21.jpg",
+    src: "/images/gallery/restroom-1.jpg",
   },
   {
     id: 18,
@@ -936,7 +936,7 @@ export const galleryImages = [
     size: "small", // pairs with id 12 → suites done ✓
     title: "Accessible Passage area",
     alt: "A clean and safe passage area",
-    src: "/images/gallery/passage-6.jpg",
+    src: "/images/gallery/passage-5.jpg",
   },
  
 ];

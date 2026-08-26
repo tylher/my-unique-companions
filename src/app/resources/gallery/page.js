@@ -154,7 +154,7 @@ export default function GalleryPage() {
           <img
             alt="Cinematic wide shot of a luxurious, light-filled living room in a high-end adult family home with soft natural light through floor-to-ceiling windows."
             className="w-full h-full object-cover object-center"
-            src="/images/gallery/hero-living-room.jpg"
+            src="/images/gallery/living-room-2.jpg"
           />
           <div className="absolute inset-0 bg-primary-container/50 mix-blend-multiply" />
           <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
@@ -205,7 +205,7 @@ export default function GalleryPage() {
             for dignity, comfort, and community connection.
           </motion.p>
 
-          {/* Scroll cue */}
+          {/* Scroll cue
           <motion.div
             className="mt-10 flex flex-col items-center gap-1.5 text-on-primary/50"
             initial={{ opacity: 0 }}
@@ -224,7 +224,7 @@ export default function GalleryPage() {
                 ease: "easeInOut",
               }}
             />
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </section>
 
