@@ -931,14 +931,6 @@ export const galleryImages = [
     src: "/images/gallery/pic21.jpg",
   },
   {
-    id: 16,
-    category: "walk-way",
-    size: "small", // pairs with id 12 → suites done ✓
-    title: "Accessible Passage area",
-    alt: "A clean and safe passage area",
-    src: "/images/gallery/passage-5.jpg",
-  },
-  {
     id: 18,
     category: "walk-way",
     size: "small", // pairs with id 12 → suites done ✓
