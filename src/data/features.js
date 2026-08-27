@@ -738,23 +738,23 @@ export const homeGallery = {
     {
       id: 1,
       alt: "Warm interior living room",
-      src: "/images/gallery/pic5.jpg",
+      src: "/images/gallery/living-room-1.jpg",
     },
     {
       id: 2,
       alt: "Cozy bedroom",
-      src: "/images/gallery/pic8.jpg",
+      src: "/images/gallery/room-2_2.jpg",
     },
     {
       id: 3,
       alt: "Bright dining area",
-      src: "/images/gallery/pic4.jpg",
+      src: "/images/gallery/dining-1.jpg",
     },
     {
       id: 4,
       alt: "Garden patio",
-      src: "/images/gallery/pic17.jpg",
-      overlayText: "+10 More Photos",
+      src: "/images/gallery/office-1.jpg",
+      overlayText: "+13 More Photos",
     },
   ],
 };
