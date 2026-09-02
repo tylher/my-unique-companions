@@ -858,26 +858,12 @@ export const galleryImages = [
     src: "/images/gallery/room-1_1.jpg",
   },
   {
-    id: 7,
-    category: "suites",
-    size: "small",
-    alt: "A bright private suite bathroom with grab bars discreetly integrated into elegant tilework, balancing safety and luxury.",
-    src: "/images/gallery/room-1_2.png",
-  },
-  {
     id: 8,
     category: "suites",
     size: "small",
     title: "Comfortable bedroom",
     alt: "A cozy bedroom nook with a plush reading chair beside the bed, bathed in soft natural light from a nearby window.",
     src: "/images/gallery/room-2_1.png",
-  },
-  {
-    id: 9,
-    category: "suites",
-    size: "wide",
-    alt: "A bright sitting area within a private suite, featuring comfortable armchairs arranged for relaxing or receiving visitors.",
-    src: "/images/gallery/room-2_2.png",
   },
   {
     id: 10,
