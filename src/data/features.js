@@ -742,8 +742,8 @@ export const homeGallery = {
     },
     {
       id: 2,
-      alt: "Cozy bedroom",
-      src: "/images/gallery/room-2_2.jpg",
+      alt: "well managed garden",
+      src: "/images/gallery/garden-3.png",
     },
     {
       id: 3,
@@ -754,7 +754,7 @@ export const homeGallery = {
       id: 4,
       alt: "Garden patio",
       src: "/images/gallery/office-1.jpg",
-      overlayText: "+13 More Photos",
+      overlayText: "+17 More Photos",
     },
   ],
 };
@@ -813,7 +813,7 @@ export const galleryImages = [
   {
     id: 1,
     category: "dining",
-    size: "wide", // dining: 1 item → wide fills full row ✓
+    size: "wide",
     title: "Communal Dining",
     alt: "A bright, modern chef's kitchen and communal dining area in a luxury adult family home, with pristine white countertops, soft blue cabinetry, and warm wood accents.",
     src: "/images/gallery/dining-1.jpg",
@@ -821,14 +821,14 @@ export const galleryImages = [
   {
     id: 2,
     category: "living",
-    size: "large", // living row 1: large + small (ids 2,3) → 8+4 ✓
+    size: "large",
     alt: "A close-up, high-quality shot of a comfortable, premium reading nook bathed in warm afternoon sunlight, with a plush armchair and a wooden side table holding a ceramic teacup.",
     src: "/images/gallery/living-room-1.jpg",
   },
   {
     id: 3,
     category: "living",
-    size: "small", // pairs with id 2
+    size: "small",
     badge: "Wellness Spaces",
     title: "The Activity Lounge",
     alt: "A spacious, meticulously designed wellness and activity center within a premium elder care home, with large windows, polished hardwood floors, and comfortable seating arranged for group activities.",
@@ -837,108 +837,136 @@ export const galleryImages = [
   {
     id: 4,
     category: "living",
-    size: "large", // suites row 1: large + 2 smalls (ids 4,6,9) → 8+4 ✓
-    title: "Private living room Suite",
-    alt: "A full view of a spacious private bedroom suite with hotel-quality furnishings, a large window with soft natural light, and a cozy seating area.",
+    size: "large",
+    title: "Cozy Family Living Room",
+    alt: "A warm, spacious living room with comfortable seating, large windows, and natural light, designed for residents to relax and socialize together.",
     src: "/images/gallery/living-room-3.jpg",
   },
   {
-    id: 17,
-    category: "walk-way",
-    size: "small", // suites row 1: large + 2 smalls (ids 4,6,9) → 8+4 ✓
-    title: "Private living room Suite",
-    alt: "A full view of a spacious private bedroom suite with hotel-quality furnishings, a large window with soft natural light, and a cozy seating area.",
-    src: "/images/gallery/passage-4.jpg",
-  },
-  {
     id: 5,
-    category: "suites",
-    size: "large", // gardens row 1: large + 2 smalls (ids 5,7,10) → 8+4 ✓
-    alt: "A peaceful seating area in the garden courtyard, surrounded by flowering plants, designed for quiet conversation and reflection.",
-    src: "/images/gallery/room-1_1.jpg",
+    category: "walk-way",
+    size: "small",
+    title: "Bright Hallway",
+    alt: "A well-lit interior hallway with handrails and non-slip flooring, connecting private suites to common areas.",
+    src: "/images/gallery/passage-4.jpg",
   },
   {
     id: 6,
     category: "suites",
-    size: "small", // pairs with id 4 (small 1 of 2)
-    alt: "A bright private suite bathroom with grab bars discreetly integrated into elegant tilework, balancing safety and luxury.",
-    src: "/images/gallery/room-1_2.jpg",
+    size: "large",
+    alt: "A private suite bedroom furnished with a comfortable bed, soft lighting, and tasteful décor, offering a peaceful retreat for residents.",
+    src: "/images/gallery/room-1_1.jpg",
   },
   {
     id: 7,
     category: "suites",
-    size: "small", // pairs with id 5 (small 1 of 2)
-    title: "Comfortable bedroom",
-    alt: "Accessible raised garden beds in a courtyard, allowing residents to participate in light gardening activities at a comfortable height.",
-    src: "/images/gallery/room-2_1.jpg",
+    size: "small",
+    alt: "A bright private suite bathroom with grab bars discreetly integrated into elegant tilework, balancing safety and luxury.",
+    src: "/images/gallery/room-1_2.png",
   },
   {
     id: 8,
     category: "suites",
-    size: "wide", // living row 2: wide (id 8) → full row ✓
-    alt: "A living space",
-    src: "/images/gallery/room-2_2.jpg",
+    size: "small",
+    title: "Comfortable bedroom",
+    alt: "A cozy bedroom nook with a plush reading chair beside the bed, bathed in soft natural light from a nearby window.",
+    src: "/images/gallery/room-2_1.png",
   },
   {
     id: 9,
     category: "suites",
-    size: "small", // pairs with id 4 (small 2 of 2)
-    alt: "A thoughtfully decorated private suite with personal mementos and photographs displayed on a dresser, reflecting individual personality.",
-    src: "/images/gallery/room-3_1.jpg",
+    size: "wide",
+    alt: "A bright sitting area within a private suite, featuring comfortable armchairs arranged for relaxing or receiving visitors.",
+    src: "/images/gallery/room-2_2.png",
   },
   {
     id: 10,
     category: "suites",
-    size: "small", // pairs with id 5 (small 2 of 2) → gardens done ✓
-    alt: "A well lit and furnished place of rest",
-    src: "/images/gallery/room-3_2.jpg",
+    size: "large",
+    alt: "A well-lit and comfortably furnished place of rest within a private suite, designed for quiet relaxation.",
+    src: "/images/gallery/room-3_2.png",
   },
   {
     id: 11,
     category: "suites",
-    size: "wide", // suites row 2: wide (id 11) → full row ✓
+    size: "small",
     title: "Luxury Bathroom",
-    alt: "A clean and safe bathroom",
+    alt: "An elegantly finished private bathroom with premium fixtures, a walk-in shower, and marble-style tilework.",
     src: "/images/gallery/restroom-2.jpg",
   },
   {
     id: 12,
     category: "suites",
-    size: "large", // suites row 3: large + small (ids 12,14) → 8+4 ✓
+    size: "large",
     alt: "A thoughtfully decorated private suite with personal mementos and photographs displayed on a dresser, reflecting individual personality.",
     src: "/images/gallery/room-3_3.jpg",
   },
   {
     id: 13,
     category: "walk-way",
-    size: "small", // living row 3: large + small… but living has no more smalls
-    alt: "A tidy passage to walk on comfortably.", // → need id 13 large + nothing
-    src: "/images/gallery/passage-1.jpg", // fix: make wide ↓ see note
+    size: "small",
+    alt: "A brightly lit hallway lined with framed artwork, leading residents comfortably between suites and shared spaces.",
+    src: "/images/gallery/passage-1.jpg",
   },
   {
     id: 14,
     category: "walk-way",
-    size: "small", // living row 3: large + small… but living has no more smalls
-    alt: "A tidy passage to walk on comfortably.", // → need id 13 large + nothing
-    src: "/images/gallery/passage-3.jpg", // fix: make wide ↓ see note
+    size: "small",
+    alt: "A wide, wheelchair-accessible corridor with sturdy handrails along both walls for added safety and support.",
+    src: "/images/gallery/passage-3.jpg",
   },
   {
     id: 15,
     category: "suites",
-    size: "small", // pairs with id 12 → suites done ✓
+    size: "large",
+    alt: "A sunlit private suite featuring a large window seat, layered textiles, and warm wood furnishings for a homelike feel.",
+    src: "/images/gallery/room-1_3.jpg",
+  },
+  {
+    id: 16,
+    category: "suites",
+    size: "small",
     title: "Accessible Restroom",
-    alt: "A clean and safe bathroom",
+    alt: "A fully accessible bathroom with grab bars, a roll-in shower, and a raised toilet seat, combining safety with comfort.",
     src: "/images/gallery/restroom-1.jpg",
+  },
+  {
+    id: 17,
+    category: "suites",
+    size: "large",
+    alt: "A serene private suite with a queen-size bed, soft ambient lighting, and a small seating nook by the window.",
+    src: "/images/gallery/room-2_3.jpg",
   },
   {
     id: 18,
     category: "walk-way",
-    size: "small", // pairs with id 12 → suites done ✓
+    size: "small",
     title: "Accessible Passage area",
-    alt: "A clean and safe passage area",
+    alt: "A clean, well-maintained hallway with non-slip flooring and clear sightlines for easy navigation.",
     src: "/images/gallery/passage-5.jpg",
   },
- 
+  {
+    id: 19,
+    category: "garden",
+    size: "wide",
+    title: "Garden Courtyard",
+    alt: "A lush outdoor garden courtyard with manicured pathways, flowering plants, and shaded seating areas for residents to enjoy fresh air.",
+    src: "/images/gallery/garden-1.png",
+  },
+  {
+    id: 20,
+    category: "garden",
+    size: "large",
+    alt: "A peaceful seating area in the garden courtyard, surrounded by flowering plants, designed for quiet conversation and reflection.",
+    src: "/images/gallery/garden-2.png",
+  },
+  {
+    id: 21,
+    category: "garden",
+    size: "small",
+    alt: "Accessible raised garden beds in a courtyard, allowing residents to participate in light gardening activities at a comfortable height.",
+    src: "/images/gallery/garden-3.png",
+  },
 ];
 export const trainingItems = [
   "Dementia specific care",
