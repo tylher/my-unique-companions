@@ -947,7 +947,7 @@ export const galleryImages = [
   },
   {
     id: 19,
-    category: "garden",
+    category: "gardens",
     size: "wide",
     title: "Garden Courtyard",
     alt: "A lush outdoor garden courtyard with manicured pathways, flowering plants, and shaded seating areas for residents to enjoy fresh air.",
@@ -955,14 +955,14 @@ export const galleryImages = [
   },
   {
     id: 20,
-    category: "garden",
+    category: "gardens",
     size: "large",
     alt: "A peaceful seating area in the garden courtyard, surrounded by flowering plants, designed for quiet conversation and reflection.",
     src: "/images/gallery/garden-2.png",
   },
   {
     id: 21,
-    category: "garden",
+    category: "gardens",
     size: "small",
     alt: "Accessible raised garden beds in a courtyard, allowing residents to participate in light gardening activities at a comfortable height.",
     src: "/images/gallery/garden-3.png",
