@@ -48,7 +48,7 @@ const AboutPage = () => {
             <Image
               alt="Warm home interior"
               className="inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105 rounded-3xl"
-              src="/images/home.jpg"
+              src="/images/home.webp"
               fill
             />
           </div>

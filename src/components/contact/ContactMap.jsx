@@ -11,7 +11,7 @@ const ContactMap = () => {
           target="_blank"
         >
           <img
-            src="/images/unique-companions-map.png"
+            src="/images/unique-companions-map.webp"
             alt="Map View"
             className="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 opacity-80 group-hover:opacity-100"
           />

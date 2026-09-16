@@ -33,7 +33,7 @@ const Header = () => {
       <div className="flex items-center justify-between">
         <Link href={"/"}>
           <Image
-            src="/images/Unique-Companions-Logo.png"
+            src="/images/Unique-Companions-Logo.webp"
             alt="Unique Companions AFQ"
             width={120}
             height={50}

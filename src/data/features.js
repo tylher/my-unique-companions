@@ -61,7 +61,7 @@ export const features = [
     title: "Compassionate Personalized Care",
     description:
       "Our team is dedicated to providing care with genuine heart and professional excellence, tailored to unique needs.",
-    icon: "/images/icons/compassion.png",
+    icon: "/images/icons/compassion.webp",
     iconAlt: "Compassion Icon",
     iconBg: "bg-secondary-container/10",
   },
@@ -70,7 +70,7 @@ export const features = [
     title: "Home-Like Environment",
     description:
       "A premium residential environment that prioritizes comfort and safety over clinical routine.",
-    icon: "/images/icons/home-like.png",
+    icon: "/images/icons/home-like.webp",
     iconAlt: "Home-Like Setting Icon",
     iconBg: "bg-primary/5",
   },
@@ -79,7 +79,7 @@ export const features = [
     title: "Dignity & Independence",
     description:
       "Empowering residents to maintain their independence while providing respectful, supportive care.",
-    icon: "/images/icons/personalized-care.png",
+    icon: "/images/icons/personalized-care.webp",
     iconAlt: "Dignity Icon",
     iconBg: "bg-primary/5",
   },
@@ -88,7 +88,7 @@ export const features = [
     title: "Open Family Communication",
     description:
       "Keeping families informed and involved through transparent communication and regular updates.",
-    icon: "/images/icons/family-care.png",
+    icon: "/images/icons/family-care.webp",
     iconAlt: "Family Communication Icon",
     iconBg: "bg-primary/5",
   },
@@ -223,32 +223,32 @@ export const philosophy = [
     title: "Dignity and Independence",
     text: "We honor every resident’s individuality by encouraging autonomy while providing respectful support in daily living.",
     icon: MdOutlineSelfImprovement,
-    image: "/images/independence.jpg",
+    image: "/images/independence.webp",
   },
   {
     title: "Personalized Care",
     text: "Care plans are tailored to each person’s unique needs, preferences, and health requirements.",
     icon: MdOutlineFavorite,
-    image: "/images/personalized-care.jpg",
+    image: "/images/personalized-care.webp",
   },
   {
     title: "Warm Home Environment",
     text: "We create a comforting, home-like space that promotes belonging, safety, and peace of mind.",
     icon: MdHome,
     image:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+      "/images/warm-home.webp",
   },
   {
     title: "Open Communication",
     text: "We maintain transparent and ongoing communication with families and care partners.",
     icon: MdChat,
-    image: "/images/communication.jpg",
+    image: "/images/communication.webp",
   },
   {
     title: "Holistic Well-being",
     text: "We support physical, emotional, and social wellness through thoughtful, continuous care.",
     icon: MdHealthAndSafety,
-    image: "/images/wellbeing.jpg",
+    image: "/images/wellbeing.webp",
   },
 ];
 
@@ -377,7 +377,7 @@ export const detailedServices = [
     quote:
       "Every resident receives care that honors their preferences, comfort level, and personal dignity.",
     chip: "Independence First",
-    image: "/images/assisted.jpg",
+    image: "/images/assisted.webp",
   },
 
   {
@@ -397,7 +397,7 @@ export const detailedServices = [
     quote:
       "We maintain clear communication with families and medical professionals to keep care consistent and reliable.",
     chip: "Safe & Reliable",
-    image: "/images/medication-assistance2.jpg",
+    image: "/images/medication-assistance2.webp",
   },
 
   {
@@ -416,7 +416,7 @@ export const detailedServices = [
     quote:
       "Meals are served in a warm, family style setting that encourages connection and comfort.",
     chip: "Home-Cooked Daily",
-    image: "/images/home-cooked.jpg",
+    image: "/images/home-cooked.webp",
   },
 
   {
@@ -434,7 +434,7 @@ export const detailedServices = [
     ],
     quote: "Residents live freely — without the weight of household chores.",
     chip: "Clean · Safe · Peaceful",
-    image: "/images/house-keeping.jpg",
+    image: "/images/house-keeping.webp",
   },
 
   {
@@ -455,7 +455,7 @@ export const detailedServices = [
     quote:
       "Our goal is to help residents feel safe, understood, and emotionally supported",
     chip: "Specialized Care",
-    image: "/images/memory.jpg",
+    image: "/images/memory.webp",
   },
 
   {
@@ -475,7 +475,7 @@ export const detailedServices = [
     quote:
       "We act as partners — not just caregivers — in your loved one's health.",
     chip: "Family Always Informed",
-    image: "/images/healthcare2.jpg",
+    image: "/images/healthcare2.webp",
   },
 
   {
@@ -495,7 +495,7 @@ export const detailedServices = [
     quote:
       "We create a warm, family like atmosphere where residents feel connected and valued.",
     chip: "Community & Companionship",
-    image: "/images/recreation1.jpg",
+    image: "/images/recreation1.webp",
   },
 
   {
@@ -514,7 +514,7 @@ export const detailedServices = [
     quote:
       "Everything we do is centered on comfort, dignity, and quality of life.",
     chip: "Home-Like Living",
-    image: "/images/safe.jpg",
+    image: "/images/safe.webp",
   },
 ];
 
@@ -738,22 +738,22 @@ export const homeGallery = {
     {
       id: 1,
       alt: "Warm interior living room",
-      src: "/images/gallery/living-room-1.jpg",
+      src: "/images/gallery/living-room-1.webp",
     },
     {
       id: 2,
       alt: "well managed garden",
-      src: "/images/gallery/garden-3.png",
+      src: "/images/gallery/garden-3.webp",
     },
     {
       id: 3,
       alt: "Bright dining area",
-      src: "/images/gallery/dining-1.jpg",
+      src: "/images/gallery/dining-1.webp",
     },
     {
       id: 4,
       alt: "Garden patio",
-      src: "/images/gallery/office-1.jpg",
+      src: "/images/gallery/office-1.webp",
       overlayText: "+17 More Photos",
     },
   ],
@@ -816,14 +816,14 @@ export const galleryImages = [
     size: "wide",
     title: "Communal Dining",
     alt: "A bright, modern chef's kitchen and communal dining area in a luxury adult family home, with pristine white countertops, soft blue cabinetry, and warm wood accents.",
-    src: "/images/gallery/dining-1.jpg",
+    src: "/images/gallery/dining-1.webp",
   },
   {
     id: 2,
     category: "living",
     size: "large",
     alt: "A close-up, high-quality shot of a comfortable, premium reading nook bathed in warm afternoon sunlight, with a plush armchair and a wooden side table holding a ceramic teacup.",
-    src: "/images/gallery/living-room-1.jpg",
+    src: "/images/gallery/living-room-1.webp",
   },
   {
     id: 3,
@@ -832,7 +832,7 @@ export const galleryImages = [
     badge: "Wellness Spaces",
     title: "The Activity Lounge",
     alt: "A spacious, meticulously designed wellness and activity center within a premium elder care home, with large windows, polished hardwood floors, and comfortable seating arranged for group activities.",
-    src: "/images/gallery/living-room-2.jpg",
+    src: "/images/gallery/living-room-2.webp",
   },
   {
     id: 4,
@@ -840,7 +840,7 @@ export const galleryImages = [
     size: "large",
     title: "Cozy Family Living Room",
     alt: "A warm, spacious living room with comfortable seating, large windows, and natural light, designed for residents to relax and socialize together.",
-    src: "/images/gallery/living-room-3.jpg",
+    src: "/images/gallery/living-room-3.webp",
   },
   {
     id: 5,
@@ -848,14 +848,14 @@ export const galleryImages = [
     size: "small",
     title: "Bright Hallway",
     alt: "A well-lit interior hallway with handrails and non-slip flooring, connecting private suites to common areas.",
-    src: "/images/gallery/passage-4.jpg",
+    src: "/images/gallery/passage-4.webp",
   },
   {
     id: 6,
     category: "suites",
     size: "large",
     alt: "A private suite bedroom furnished with a comfortable bed, soft lighting, and tasteful décor, offering a peaceful retreat for residents.",
-    src: "/images/gallery/room-1_1.jpg",
+    src: "/images/gallery/room-1_1.webp",
   },
   {
     id: 8,
@@ -863,14 +863,14 @@ export const galleryImages = [
     size: "small",
     title: "Comfortable bedroom",
     alt: "A cozy bedroom nook with a plush reading chair beside the bed, bathed in soft natural light from a nearby window.",
-    src: "/images/gallery/room-2_1.png",
+    src: "/images/gallery/room-2_1.webp",
   },
   {
     id: 10,
     category: "suites",
     size: "large",
     alt: "A well-lit and comfortably furnished place of rest within a private suite, designed for quiet relaxation.",
-    src: "/images/gallery/room-3_2.png",
+    src: "/images/gallery/room-3_2.webp",
   },
   {
     id: 11,
@@ -878,35 +878,35 @@ export const galleryImages = [
     size: "small",
     title: "Luxury Bathroom",
     alt: "An elegantly finished private bathroom with premium fixtures, a walk-in shower, and marble-style tilework.",
-    src: "/images/gallery/restroom-2.jpg",
+    src: "/images/gallery/restroom-2.webp",
   },
   {
     id: 12,
     category: "suites",
     size: "large",
     alt: "A thoughtfully decorated private suite with personal mementos and photographs displayed on a dresser, reflecting individual personality.",
-    src: "/images/gallery/room-3_3.jpg",
+    src: "/images/gallery/room-3_3.webp",
   },
   {
     id: 13,
     category: "walk-way",
     size: "small",
     alt: "A brightly lit hallway lined with framed artwork, leading residents comfortably between suites and shared spaces.",
-    src: "/images/gallery/passage-1.jpg",
+    src: "/images/gallery/passage-1.webp",
   },
   {
     id: 14,
     category: "walk-way",
     size: "small",
     alt: "A wide, wheelchair-accessible corridor with sturdy handrails along both walls for added safety and support.",
-    src: "/images/gallery/passage-3.jpg",
+    src: "/images/gallery/passage-3.webp",
   },
   {
     id: 15,
     category: "suites",
     size: "large",
     alt: "A sunlit private suite featuring a large window seat, layered textiles, and warm wood furnishings for a homelike feel.",
-    src: "/images/gallery/room-1_3.jpg",
+    src: "/images/gallery/room-1_3.webp",
   },
   {
     id: 16,
@@ -914,14 +914,14 @@ export const galleryImages = [
     size: "small",
     title: "Accessible Restroom",
     alt: "A fully accessible bathroom with grab bars, a roll-in shower, and a raised toilet seat, combining safety with comfort.",
-    src: "/images/gallery/restroom-1.jpg",
+    src: "/images/gallery/restroom-1.webp",
   },
   {
     id: 17,
     category: "suites",
     size: "large",
     alt: "A serene private suite with a queen-size bed, soft ambient lighting, and a small seating nook by the window.",
-    src: "/images/gallery/room-2_3.jpg",
+    src: "/images/gallery/room-2_3.webp",
   },
   {
     id: 18,
@@ -929,7 +929,7 @@ export const galleryImages = [
     size: "small",
     title: "Accessible Passage area",
     alt: "A clean, well-maintained hallway with non-slip flooring and clear sightlines for easy navigation.",
-    src: "/images/gallery/passage-5.jpg",
+    src: "/images/gallery/passage-5.webp",
   },
   {
     id: 19,
@@ -937,21 +937,21 @@ export const galleryImages = [
     size: "wide",
     title: "Garden Courtyard",
     alt: "A lush outdoor garden courtyard with manicured pathways, flowering plants, and shaded seating areas for residents to enjoy fresh air.",
-    src: "/images/gallery/garden-1.png",
+    src: "/images/gallery/garden-1.webp",
   },
   {
     id: 20,
     category: "gardens",
     size: "large",
     alt: "A peaceful seating area in the garden courtyard, surrounded by flowering plants, designed for quiet conversation and reflection.",
-    src: "/images/gallery/garden-2.png",
+    src: "/images/gallery/garden-2.webp",
   },
   {
     id: 21,
     category: "gardens",
     size: "small",
     alt: "Accessible raised garden beds in a courtyard, allowing residents to participate in light gardening activities at a comfortable height.",
-    src: "/images/gallery/garden-3.png",
+    src: "/images/gallery/garden-3.webp",
   },
 ];
 export const trainingItems = [

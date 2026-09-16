@@ -154,7 +154,7 @@ export default function GalleryPage() {
           <img
             alt="Cinematic wide shot of a luxurious, light-filled living room in a high-end adult family home with soft natural light through floor-to-ceiling windows."
             className="w-full h-full object-cover object-center"
-            src="/images/gallery/living-room-2.jpg"
+            src="/images/gallery/living-room-2.webp"
           />
           <div className="absolute inset-0 bg-primary-container/50 mix-blend-multiply" />
           <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />

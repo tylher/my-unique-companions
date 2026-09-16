@@ -62,7 +62,7 @@ const HomePage = () => {
       <section className="relative min-h-screen flex items-center ">
         {/* Background Image */}
         <Image
-          src="/images/homeBg.jpg"
+          src="/images/homeBg.webp"
           alt="Home Background"
           fill
           priority

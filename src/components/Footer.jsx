@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="w-full lg:w-fit flex flex-col gap-1 justify-center items-center">
           <Link className="relative w-fit" href={"/"}>
             <Image
-              src="/images/Unique-Companions-Logo.png"
+              src="/images/Unique-Companions-Logo.webp"
               alt="Unique Companions AFH"
               className="object-contain"
               width={120}

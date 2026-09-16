@@ -290,7 +290,7 @@ const ApplicationFormModal = forwardRef(
                   <UploadZone
                     label="Upload Certification"
                     hint="HCA, CNA, CPR or other credentials"
-                    accept=".pdf,.doc,.docx,.jpg,.png"
+                    accept=".pdf,.doc,.docx,.jpg,.png,.webp"
                     name="certificate"
                     optional
                     file={certFile}

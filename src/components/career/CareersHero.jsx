@@ -123,7 +123,7 @@ export default function CareersHero() {
               <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-primary/80 to-transparent z-10" />
 
               <Image
-                src="/images/caregiver1.jpg"
+                src="/images/caregiver1.webp"
                 fill
                 className="object-cover rounded-3xl md:rounded-4xl"
                 alt="Caregiver"
