@@ -16,7 +16,7 @@ const ContactInfoItem = ({ icon: Icon, title, content, data, subtitle }) => {
               data.length > 0 &&
               data.map((item, id) => {
                 return (
-                  <div>
+                  <div key={id}>
                     <a
                       target="_blank"
                       rel="noopner noreferrer"

@@ -104,7 +104,9 @@ function DesktopDropdown({ link }) {
   const pathName = usePathname();
   const closeTimer = useRef(null);
 
-  const isChildActive = link.children.some((c) => pathName === c.href);
+  const isChildActive = link.children.some(
+    (c) => pathName === c.href + "/" || pathName === c.href,
+  );
 
   // Small delay on close so moving the cursor from trigger → panel
   // doesn't flicker the dropdown shut mid-travel.
@@ -224,7 +226,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
                 after:bg-secondary after:scale-x-0 after:origin-left after:transition-transform
                 after:duration-300 after:ease-[cubic-bezier(0.22,1,0.36,1)] hover:after:scale-x-100
                 active:text-secondary
-                ${pathName === link.href ? "text-secondary-container" : "text-primary"}`}
+                ${pathName === link.href + "/" || pathName === link.href ? " text-secondary-container" : "text-primary"}`}
             >
               <Link href={link.href}>{link.name}</Link>
             </li>
@@ -247,7 +249,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
                 // Mobile dropdown (accordion)
                 if (link.children) {
                   const isChildActive = link.children.some(
-                    (c) => pathName === c.href,
+                    (c) => pathName === c.href + "/" || pathName === c.href,
                   );
                   return (
                     <motion.li
@@ -297,7 +299,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
                                       setMobileResourcesOpen(false);
                                     }}
                                     className={`flex flex-col gap-0.5 rounded-lg px-3 py-2.5 transition-colors duration-200 hover:bg-primary/5
-                                      ${pathName === sub.href ? "text-secondary-container" : "text-primary/80"}`}
+                                      ${pathName === sub.href || pathName === sub.href + "/" ? "text-secondary-container" : "text-primary/80"}`}
                                   >
                                     <span className="text-sm font-medium">
                                       {sub.name}
@@ -326,7 +328,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.04, duration: 0.22 }}
                     className={`rounded-lg ${
-                      pathName === link.href
+                      pathName === link.href || pathName === link.href + "/"
                         ? "text-secondary-container"
                         : "text-primary"
                     }`}
